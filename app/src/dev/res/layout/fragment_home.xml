@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/splash_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/dp10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:id="@+id/rl_enquiry"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/module_height"
+                android:layout_weight=".5"
+                android:background="@drawable/bg_btn_module">
+
+                <View
+                    android:layout_width="@dimen/dp10"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/colorAccent" />
+
+                <com.customviews.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp30"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="@string/enquiry"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/textLarge"
+                    app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/grid_right_decor" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_locality"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/module_height"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_weight=".5"
+                android:background="@drawable/bg_btn_module">
+
+                <View
+                    android:layout_width="@dimen/dp10"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/colorAccent" />
+
+                <com.customviews.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp30"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="@string/locality"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/textLarge"
+                    app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/grid_right_decor" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+
+            <RelativeLayout
+                android:id="@+id/rl_group"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/module_height"
+                android:layout_weight=".5"
+                android:background="@drawable/bg_btn_module">
+
+                <View
+                    android:layout_width="@dimen/dp10"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/colorAccent" />
+
+                <com.customviews.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp30"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="@string/add_group"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/textLarge"
+                    app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/grid_right_decor" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_my_group"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/module_height"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_weight=".5"
+                android:background="@drawable/bg_btn_module">
+
+                <View
+                    android:layout_width="@dimen/dp10"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/colorAccent" />
+
+                <com.customviews.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp30"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="@string/my_group"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/textLarge"
+                    app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/grid_right_decor" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+
+            <RelativeLayout
+                android:id="@+id/rl_center_form"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/module_height"
+                android:layout_weight=".5"
+                android:background="@drawable/bg_btn_module">
+
+                <View
+                    android:layout_width="@dimen/dp10"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/colorAccent" />
+
+                <com.customviews.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp30"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="@string/add_center"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/textLarge"
+                    app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/grid_right_decor" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_my_centers"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/module_height"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_weight=".5"
+                android:background="@drawable/bg_btn_module">
+
+                <View
+                    android:layout_width="@dimen/dp10"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/colorAccent" />
+
+                <com.customviews.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp30"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="@string/my_centers"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/textLarge"
+                    app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/grid_right_decor" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:id="@+id/rl_application_form"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/module_height"
+                android:layout_weight=".5"
+                android:background="@drawable/bg_btn_module">
+
+                <View
+                    android:layout_width="@dimen/dp10"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/colorAccent" />
+
+                <com.customviews.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp30"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="@string/application_form"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/textLarge"
+                    app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/grid_right_decor" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_my_leads"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/module_height"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_weight=".5"
+                android:background="@drawable/bg_btn_module">
+
+                <View
+                    android:layout_width="@dimen/dp10"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/colorAccent" />
+
+                <com.customviews.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp30"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="@string/my_leads"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/textLarge"
+                    app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/grid_right_decor" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:id="@+id/rl_fi"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/module_height"
+                android:layout_weight=".5"
+                android:background="@drawable/bg_btn_module"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="@dimen/dp10"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/colorAccent" />
+
+                <com.customviews.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp30"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="@string/fi"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/textLarge"
+                    app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/grid_right_decor" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_added_fi"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/module_height"
+                android:layout_weight=".5"
+                android:background="@drawable/bg_btn_module">
+
+                <View
+                    android:layout_width="@dimen/dp10"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/colorAccent" />
+
+                <com.customviews.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp30"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="@string/added_fi"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/textLarge"
+                    app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/grid_right_decor" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_setting"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/module_height"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_weight=".5"
+                android:background="@drawable/bg_btn_module">
+
+                <View
+                    android:layout_width="@dimen/dp10"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/colorAccent" />
+
+                <com.customviews.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp30"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="@string/setting"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/textLarge"
+                    app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/grid_right_decor" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:id="@+id/rl_cgt"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/module_height"
+                android:layout_weight=".5"
+                android:background="@drawable/bg_btn_module">
+
+                <View
+                    android:layout_width="@dimen/dp10"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/colorAccent" />
+
+                <com.customviews.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp30"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="@string/cgt"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/textLarge"
+                    app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/grid_right_decor" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_grt"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/module_height"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_weight=".5"
+                android:background="@drawable/bg_btn_module">
+
+                <View
+                    android:layout_width="@dimen/dp10"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/colorAccent" />
+
+                <com.customviews.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp30"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="@string/grt"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/textLarge"
+                    app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/grid_right_decor" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:id="@+id/rl_recovery"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/module_height"
+                android:layout_weight=".5"
+                android:background="@drawable/bg_btn_module">
+
+                <View
+                    android:layout_width="@dimen/dp10"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/colorAccent" />
+
+                <com.customviews.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp30"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="@string/recovery"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/textLarge"
+                    app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/grid_right_decor" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

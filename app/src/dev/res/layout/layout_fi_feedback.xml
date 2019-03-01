@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dp20">
+
+            <com.customviews.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:text="@string/feedback"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/textLarge"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@drawable/bg_transparent_layout"
+                android:orientation="vertical"
+                android:padding="@dimen/dp10">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/editTextHintColor">
+
+                    <com.customviews.CustomEditText
+                        android:id="@+id/et_member_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/member_name"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:padding="@dimen/dp15"
+                        android:textColor="@color/editTextTextColor"
+                        android:textSize="@dimen/edit_text_text_size"
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:textColorHint="@color/editTextHintColor">
+
+                    <com.customviews.CustomEditText
+                        android:id="@+id/et_feedback"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/feedback"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:padding="@dimen/dp15"
+                        android:textColor="@color/editTextTextColor"
+                        android:textSize="@dimen/edit_text_text_size"
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:textColorHint="@color/editTextHintColor">
+
+                    <com.customviews.CustomEditText
+                        android:id="@+id/et_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/address"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPostalAddress"
+                        android:padding="@dimen/dp15"
+                        android:textColor="@color/editTextTextColor"
+                        android:textSize="@dimen/edit_text_text_size"
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp5"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:orientation="vertical">
+
+                    <com.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/remark_tick"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/textMedium"
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_remark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp5"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_average"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:paddingLeft="@dimen/dp10"
+                            android:text="@string/average"
+                            android:textColor="@color/colorWhite" />
+
+                        <RadioButton
+                            android:id="@+id/rb_good"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp10"
+                            android:paddingLeft="@dimen/dp10"
+                            android:text="@string/good"
+                            android:textColor="@color/colorWhite" />
+
+                        <RadioButton
+                            android:id="@+id/rb_best"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp10"
+                            android:paddingLeft="@dimen/dp10"
+                            android:text="@string/best"
+                            android:textColor="@color/colorWhite" />
+
+
+                    </RadioGroup>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp1"
+                        android:background="@color/colorWhite" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.customviews.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:text="@string/cheque"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/textLarge"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@drawable/bg_transparent_layout"
+                android:orientation="vertical"
+                android:padding="@dimen/dp10">
+
+                <RadioGroup
+                    android:id="@+id/rg_cheque"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp5"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb__own"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:paddingLeft="@dimen/dp10"
+                        android:text="@string/own"
+                        android:textColor="@color/colorWhite" />
+
+                    <RadioButton
+                        android:id="@+id/rb_husband"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:paddingLeft="@dimen/dp10"
+                        android:text="@string/husband"
+                        android:textColor="@color/colorWhite" />
+
+                    <RadioButton
+                        android:id="@+id/rb_son"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:paddingLeft="@dimen/dp10"
+                        android:text="@string/son"
+                        android:textColor="@color/colorWhite" />
+
+
+                </RadioGroup>
+            </LinearLayout>
+
+        <com.customviews.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:text="@string/utility_bill"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/textLarge"
+            app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@drawable/bg_transparent_layout"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:padding="@dimen/dp10">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColorHint="@color/editTextHintColor">
+
+                <com.customviews.CustomEditText
+                    android:id="@+id/et_bill_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/bill_name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:padding="@dimen/dp15"
+                    android:textColor="@color/editTextTextColor"
+                    android:textSize="@dimen/edit_text_text_size"
+                    app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColorHint="@color/editTextHintColor">
+
+                <com.customviews.CustomEditText
+                    android:id="@+id/et_relationship"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/relationship"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:padding="@dimen/dp15"
+                    android:textColor="@color/editTextTextColor"
+                    android:textSize="@dimen/edit_text_text_size"
+                    app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@drawable/bg_transparent_layout"
+                android:orientation="vertical"
+                android:padding="@dimen/dp10">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/editTextHintColor">
+
+                    <com.customviews.CustomEditText
+                        android:id="@+id/et_member_name2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/member_name"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:padding="@dimen/dp15"
+                        android:textColor="@color/editTextTextColor"
+                        android:textSize="@dimen/edit_text_text_size"
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:textColorHint="@color/editTextHintColor">
+
+                    <com.customviews.CustomEditText
+                        android:id="@+id/et_feedback2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/feedback"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:padding="@dimen/dp15"
+                        android:textColor="@color/editTextTextColor"
+                        android:textSize="@dimen/edit_text_text_size"
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:textColorHint="@color/editTextHintColor">
+
+                    <com.customviews.CustomEditText
+                        android:id="@+id/et_address2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/address"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPostalAddress"
+                        android:padding="@dimen/dp15"
+                        android:textColor="@color/editTextTextColor"
+                        android:textSize="@dimen/edit_text_text_size"
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp5"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:orientation="vertical">
+
+                    <com.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/remark_tick"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/textMedium"
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_remark2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp5"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_average2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:paddingLeft="@dimen/dp10"
+                            android:text="@string/average"
+                            android:textColor="@color/colorWhite" />
+
+                        <RadioButton
+                            android:id="@+id/rb_good2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp10"
+                            android:paddingLeft="@dimen/dp10"
+                            android:text="@string/good"
+                            android:textColor="@color/colorWhite" />
+
+                        <RadioButton
+                            android:id="@+id/rb_best2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp10"
+                            android:paddingLeft="@dimen/dp10"
+                            android:text="@string/best"
+                            android:textColor="@color/colorWhite" />
+
+
+                    </RadioGroup>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp1"
+                        android:background="@color/colorWhite" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.customviews.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp20"
+                android:text="@string/special_comments"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/textLarge"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@drawable/bg_transparent_layout"
+                android:orientation="vertical"
+                android:padding="@dimen/dp10">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:textColorHint="@color/editTextHintColor">
+
+                    <com.customviews.CustomEditText
+                        android:id="@+id/et_comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/comment"
+                        android:imeOptions="actionNext"
+                        android:inputType="textMultiLine"
+                        android:lines="2"
+                        android:padding="@dimen/dp10"
+                        android:textColor="@color/editTextTextColor"
+                        android:textSize="@dimen/edit_text_text_size"
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:orientation="vertical">
+
+
+                    <com.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:text="@string/house_photo"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/textLarge"
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_applicant_signature"
+                        android:layout_width="@dimen/dp140"
+                        android:layout_height="@dimen/dp140"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:background="@drawable/bg_edittext_pink"
+                        android:padding="@dimen/dp15"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/default_image" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:gravity="left"
+                    android:orientation="vertical">
+
+                    <com.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:text="@string/upload_group_photo"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/textLarge"
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_group_photo"
+                        android:layout_width="@dimen/dp140"
+                        android:layout_height="@dimen/dp140"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:background="@drawable/bg_edittext_pink"
+                        android:padding="@dimen/dp15"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/default_image" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.customviews.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp20"
+                android:text="@string/declaration"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/textLarge"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@drawable/bg_transparent_layout"
+                android:gravity="top"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp5">
+
+                <CheckBox
+                    android:id="@+id/cb_declaration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.customviews.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp10"
+                    android:layout_marginLeft="@dimen/dp5"
+                    android:lineSpacingExtra="@dimen/dp5"
+                    android:text="@string/fi_declaration_text"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/textSmall"
+                    app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+            </LinearLayout>
+
+            <com.customviews.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp20"
+                android:text="@string/name_of_field_officer"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/textLarge"
+                android:visibility="gone"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="1">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dp10"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:layout_weight="1"
+                    android:background="@color/transparent_white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp10">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+
+                        android:textColorHint="@color/editTextHintColor">
+
+                        <com.customviews.CustomEditText
+                            android:id="@+id/et_field_officer_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/officer_name"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:lines="1"
+                            android:padding="@dimen/dp15"
+                            android:textColor="@color/editTextTextColor"
+                            android:textSize="@dimen/edit_text_text_size"
+                            app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:gravity="left"
+                    android:orientation="vertical">
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_officer_signature"
+                        android:layout_width="@dimen/dp100"
+                        android:layout_height="@dimen/dp100"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:background="@drawable/bg_edittext_pink"
+                        android:padding="@dimen/dp10"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/default_image" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

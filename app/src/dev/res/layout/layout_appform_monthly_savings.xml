@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+
+    <com.customviews.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:text="@string/average_monthly_savings"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/textLarge"
+        app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@drawable/bg_transparent_layout"
+        android:orientation="vertical"
+        android:padding="@dimen/dp10">
+
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="@dimen/dp10"
+                      android:orientation="horizontal"
+                      android:weightSum="1">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:textColorHint="@color/editTextHintColor">
+
+                <com.customviews.CustomEditText
+                    android:id="@+id/et_post_office"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/post_office"
+                    android:imeOptions="actionNext"
+                    android:inputType="number|none"
+                    android:padding="@dimen/dp15"
+                    android:textColor="@color/editTextTextColor"
+                    android:textColorHint="@color/editTextHintColor"
+                    android:textSize="@dimen/edit_text_text_size"
+                    app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp5"
+                android:layout_weight=".5"
+                android:textColorHint="@color/editTextHintColor">
+
+                <com.customviews.CustomEditText
+                    android:id="@+id/et_bank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/bank"
+                    android:imeOptions="actionNext"
+                    android:inputType="number|none"
+                    android:padding="@dimen/dp15"
+                    android:textColor="@color/editTextTextColor"
+                    android:textColorHint="@color/editTextHintColor"
+                    android:textSize="@dimen/edit_text_text_size"
+                    app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                />
+            </android.support.design.widget.TextInputLayout>
+
+
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="@dimen/dp10"
+                      android:orientation="horizontal"
+                      android:weightSum="1">
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:textColorHint="@color/editTextHintColor">
+
+                <com.customviews.CustomEditText
+                    android:id="@+id/et_insurance_company"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edit_text_height"
+                    android:hint="@string/insurance_company"
+                    android:imeOptions="actionNext"
+                    android:inputType="number|none"
+                    android:padding="@dimen/dp15"
+                    android:textColor="@color/editTextTextColor"
+                    android:textColorHint="@color/editTextHintColor"
+                    android:textSize="@dimen/edit_text_text_size"
+                    app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp5"
+                android:layout_weight=".5"
+                android:textColorHint="@color/editTextHintColor">
+
+                <com.customviews.CustomEditText
+                    android:id="@+id/et_finance_company"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/finance_company"
+                    android:imeOptions="actionNext"
+                    android:inputType="number|none"
+                    android:padding="@dimen/dp15"
+                    android:textColor="@color/editTextTextColor"
+                    android:textColorHint="@color/editTextHintColor"
+                    android:textSize="@dimen/edit_text_text_size"
+                    app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="@dimen/dp10"
+                      android:orientation="horizontal"
+                      android:weightSum="1">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:textColorHint="@color/editTextHintColor">
+
+                <com.customviews.CustomEditText
+                    android:id="@+id/et_chit_fund"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/chit_fund"
+                    android:imeOptions="actionNext"
+                    android:inputType="number|none"
+                    android:padding="@dimen/dp15"
+                    android:textColor="@color/editTextTextColor"
+                    android:textColorHint="@color/editTextHintColor"
+                    android:textSize="@dimen/edit_text_text_size"
+                    app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp5"
+                android:layout_weight=".5"
+                android:textColorHint="@color/editTextHintColor">
+                <com.customviews.CustomEditText
+                    android:id="@+id/et_other_clothes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:hint="@string/other_clothes"
+                    android:imeOptions="actionDone"
+                    android:inputType="number|none"
+                    android:padding="@dimen/dp15"
+                    android:textColor="@color/editTextTextColor"
+                    android:textColorHint="@color/editTextHintColor"
+                    android:textSize="@dimen/edit_text_text_size"
+                    app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+        <com.customviews.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp30"
+            android:gravity="right"
+            android:text="Total Monthly Savings(C)"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/textLarge"
+            app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM"/>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginBottom="@dimen/dp20"
+                      android:gravity="right"
+                      android:orientation="horizontal"
+                      android:weightSum="1">
+
+
+            <LinearLayout android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_marginLeft="@dimen/dp5"
+                          android:layout_weight=".5"
+                          android:orientation="vertical">
+
+
+                <com.customviews.CustomEditText
+                    android:id="@+id/et_total_monthly_savings"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edit_text_height"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:background="@null"
+                    android:clickable="true"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:hint="@string/total_amount"
+                    android:imeOptions="actionNext"
+                    android:inputType="number|none"
+                    android:textColor="@color/editTextTextColor"
+                    android:textColorHint="@color/editTextHintColor"
+                    android:textSize="@dimen/textLarge"
+                    app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+
+                <View android:layout_width="match_parent"
+                      android:layout_height="@dimen/dp1"
+                      android:layout_marginTop="@dimen/dp5"
+                      android:background="@color/colorWhite"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

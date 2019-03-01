@@ -1,0 +1,643 @@
+<resources>
+    <string name="app_name">Dee Dee MFi</string>
+    <string name="app_name_full">Dee Dee Vanijya</string>
+    <string name="app_name_postfix">Pvt. Ltd.</string>
+
+    <!--custom fonts-->
+    <string name="gotham_rounded_bold">GOTHAM_ROUNDED_BOLD.TTF</string>
+    <string name="GOTHAM_ROUNDED_LIGHT">GOTHAM_ROUNDED_LIGHT.TTF</string>
+    <string name="GOTHAM_ROUNDED_MEDIUM">GOTHAM_ROUNDED_MEDIUM.TTF</string>
+    <string name="GOTHAM_ROUNDED_BOOK">GOTHAM_ROUNDED_BOOK.otf</string>
+
+
+    <!--RegexValidation Error Msgs-->
+    <string name="EMPTY_NAME_MSG">Please enter name.</string>
+    <string name="INVALID_NAME_MSG">Name should be 3 to 20 alphabetic characters only.</string>
+    <string name="passwordlength_MSG">Password length must between 4 to 20 !</string>
+    <string name="EMAIL_MSG">Please fill valid email id.</string>
+    <string name="PHONE_EMPTY_MSG">Please enter phone number.</string>
+    <string name="EMAIL_EMPTY_MSG">Please enter email id.</string>
+    <string name="PHONE_MSG">Phone Number should be 8 digits</string>
+    <string name="PASSWORD_EMPTY_MSG">Please enter password.</string>
+    <string name="OLD_PASSWORD_MSG">Please Enter Old Password.</string>
+    <string name="CONFIRM_PASSWORD_EMPTY_MSG">Please enter confirm password.</string>
+    <string name="PASSWORD_VALIDATION_MSG">You must be provide at least 6 to 30 characters for
+        password.
+    </string>
+
+    <!--center group form validation string-->
+    <string name="BRANCH_NAME_MSG">Please Select Branch Name.</string>
+    <string name="GROUP_NAME_MSG">Please Enter Group Name.</string>
+    <string name="CENTER_NAME_MSG">Please Enter Center Name.</string>
+    <string name="CENTER_OWNER_NAME_MSG">Please Enter Center Owner Name.</string>
+    <string name="CENTER_OWNER_CONTACT_MSG">Please Enter Center Owner Contact Number.</string>
+
+
+    <!--Validation Message-->
+    <string name="username_email_required">Username/Email is required.</string>
+    <string name="password_not_matched">Confirm Password does not match with Password</string>
+
+
+    <!--Enquiry Validation-->
+    <string name="please_enter_applicant_name">Please Enter Applicant\'s Name</string>
+    <string name="please_enter_applicant_father_name">Please Enter Applicant\'s Father Name</string>
+    <string name="please_enter_applicant_mother_name">Please Enter Applicant\'s Mother Name</string>
+    <string name="please_enter_applicant_spouse_name">Please Enter Applicant\'s Spouse Name</string>
+    <string name="please_enter_applicant_dob">Please Enter Applicant\'s DOB</string>
+    <string name="please_enter_applicant_id">Please Enter Applicant\'s ID</string>
+    <string name="please_enter_applicant_aadhar">Please Enter Applicant\'s Aadhar No</string>
+    <string name="please_enter_applicant_mobile_1">Please Enter Applicant\'s Mobile 1</string>
+    <string name="please_enter_applicant_mobile_2">Please Enter Applicant\'s Mobile 2</string>
+    <string name="please_enter_applicant_address">Please Enter Applicant\'s Address</string>
+    <string name="please_enter_applicant_source_of_income">Please Enter Applicant\'s Source</string>
+    <string name="please_enter_coapplicant_source_of_income">Please Enter CoApplicant\'s Source</string>
+    <string name="please_enter_applicant_amount">Please Enter Applicant\'s Amount</string>
+    <string name="please_enter_coapplicant_amount">Please Enter CoApplicant\'s Amount</string>
+
+    <!--Telecaller Validation-->
+    <string name="please_enter_date">Please Enter Date</string>
+    <string name="please_enter_place">Please Enter Place</string>
+    <string name="please_enter_remark">Please Enter Remark</string>
+
+
+    <!---->
+    <string name="not_availaible">N/A</string>
+    <string name="loading_please_wait">Loading....please wait</string>
+    <string name="alert">Alert</string>
+    <string name="if_you_are_not_allowing">you have to allow permission to use App features.
+    </string>
+    <string name="ok">Ok</string>
+    <string name="camera">Camera</string>
+    <string name="gallary">Gallery</string>
+    <string name="remove">Remove</string>
+    <string name="user_name">user name/email address</string>
+    <string name="password">password</string>
+    <string name="login">Login</string>
+    <string name="forgot_password_">
+        <u>Forgot Password?</u>
+    </string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="hint_email">Email</string>
+    <string name="submit">Submit</string>
+    <string name="change_password">Change Password</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="enquiry">Enquiry</string>
+    <string name="setting">Settings</string>
+    <string name="applicants_name">Applicant\'s Name</string>
+    <string name="applicants_father_name">Applicant\'s Father Name</string>
+    <string name="applicants_mother_name">Applicant\'s Mother Name</string>
+    <string name="spouse_name">Spouse Name</string>
+    <string name="applicants_dob">Applicant\'s DOB</string>
+    <string name="applicants_id">Applicant\'s Id</string>
+    <string name="applicants_mobile_number1">Applicant\'s Mobile Number 1</string>
+    <string name="applicants_mobile_number2">Applicant\'s Mobile Number 2</string>
+    <string name="applicants_address">Applicant\'s Address</string>
+    <string name="home">Home</string>
+    <string name="notification_setting">Notification Setting</string>
+    <string name="error">Error!</string>
+    <string name="error_internet_connection">Internet not available.</string>
+    <string name="are_you_sure_you_want_to_logout">Are you sure? you want to logout from App.
+    </string>
+    <string name="are_you_sure_you_want_to_exit">Are you sure? you want to exit!</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="village_info">Village Info</string>
+    <string name="mfi_operating">Mfi Operating</string>
+    <string name="village_detail">Village Details</string>
+    <string name="village_information">Village Information</string>
+    <string name="village_locality">Village/Locality Name</string>
+    <string name="locality">Add Locality</string>
+    <string name="block_area">Block/Area</string>
+    <string name="tehsil_taluka_subdivision">Tehsil/Taluka/Subdivision</string>
+    <string name="post_office">Post Office</string>
+    <string name="police_station">Police Station</string>
+    <string name="district">District</string>
+    <string name="save">Save</string>
+    <string name="no_of_household">1. No of Household in the Village/Locality</string>
+    <string name="pakka">Pakka</string>
+    <string name="kachcha">Kachcha</string>
+    <string name="community_composition">2. Community Composition in the Village(%)</string>
+    <string name="gen">GEN</string>
+    <string name="obc">OBC</string>
+    <string name="sc">SC</string>
+    <string name="st">ST</string>
+    <string name="distance_from_branch">
+        <![CDATA[3. Distance from Branch Office & Average distance from Main Road(KM)]]></string>
+    <string name="distance_branch">from Branch</string>
+    <string name="distance_mainroad">from Main Road</string>
+    <string name="state">State</string>
+    <string name="distance_from_operating">
+        <![CDATA[4. Name & Distance from Nearest Operating Village]]></string>
+    <string name="distance">Distance</string>
+    <string name="road_connectivity">5. Road Connectivity</string>
+    <string name="good">Good</string>
+    <string name="bad">Bad</string>
+    <string name="hospitals_primary">6. Hospitals/Primary Health Centers</string>
+    <string name="govt">Govt.</string>
+    <string name="private_">Private</string>
+    <string name="schools">7. Schools</string>
+    <string name="name_of_service_banks">8. Name of the Service Banks in Town</string>
+    <string name="bank_name">Bank Name</string>
+    <string name="credit_history">Credit History</string>
+    <string name="total_parties">Total Parties</string>
+    <string name="total_activity">Total Activity</string>
+    <string name="credit_history_of_village">9. Credit History of Village/Locality</string>
+    <string name="political_influence">10. Political Influence/Ruling Party/Other Parties</string>
+    <string name="major_livelyhood">11. Major Livelihood Option/Activity</string>
+    <string name="main_crops">12. Main Crops</string>
+    <string name="applicants_aadhar">Applicant\'s Aadhar Number</string>
+    <string name="id_image">Identification Image:</string>
+    <string name="please_select_id_image">Please Select Document 1 Image.</string>
+    <string name="please_select_aadhar_image">Please Select Document 2 Image.</string>
+    <string name="aadhar_image">Aadhar Image:</string>
+    <string name="something_went_wrong">Something Went Wrong. Please Try Again.</string>
+    <string name="no_data_available">No Data Available</string>
+    <string name="local_enquiries">Local Enquiries</string>
+    <string name="server_enquiries">Server Enquiries</string>
+    <string name="name_column">Name:</string>
+    <string name="mother_name_column">Mother Name:</string>
+    <string name="father_name_column">Father Name:</string>
+    <string name="aadhar_no_column">Aadhar No:</string>
+    <string name="dob_column">DOB:</string>
+    <string name="mobile1_column">Mobile 1:</string>
+    <string name="mobile2_column">Mobile 2:</string>
+    <string name="my_enquiries">My Enquiries</string>
+    <string name="you_are_offline">Oops!! You are offline. your data has been saved. Upload when
+        Internet is Available.
+    </string>
+    <string name="do_you_want_to_save">Do you want to save the data as Draft?</string>
+    <string name="name_of_mfi">Name of the MFI</string>
+    <string name="years_of_operation">Years of Operation</string>
+    <string name="total_customers">Total Customers</string>
+    <string name="repayment">Repayment</string>
+    <string name="activities">Activities</string>
+    <string name="save_and_continue"><![CDATA[Save & Continue]]></string>
+    <string name="micro_enterprises">Micro Enterprises</string>
+    <string name="nos">NOS</string>
+    <string name="other_micro_enterprises">Other Significant Micro Enterprises</string>
+    <string name="name">Name</string>
+    <string name="select_micro_entp">Select Micro Enterprises</string>
+    <string name="select_other_micro_entp">Select Other Micro Enterprise</string>
+    <string name="location_added">Location Added</string>
+    <string name="error_in_add_location">Error when upload Location.</string>
+    <string name="loan_personal_info"><![CDATA[Loan & Personal Info]]></string>
+    <string name="address">Address</string>
+    <string name="family_profile">Family Profile</string>
+    <string name="expenses_savings"><![CDATA[Expenses & Savings]]></string>
+    <string name="application_form">Application Form</string>
+    <string name="loan_details">Loan Details</string>
+    <string name="branch">Branch</string>
+    <string name="amount">Amount</string>
+    <string name="payment_cycle">Payment Cycle</string>
+    <string name="purpose_of_loan">Purpose of Loan</string>
+    <string name="personal_info">Personal Info</string>
+    <string name="husbands_name">Husband\'s Name</string>
+    <string name="father_name">Father\'s Name</string>
+    <string name="mother_name">Mother\'s Name</string>
+    <string name="dob">Date of Birth</string>
+    <string name="religion">Religion</string>
+    <string name="maritul_status">Marital Status</string>
+    <string name="education">Education</string>
+    <string name="current_address">Current Address</string>
+    <string name="current_address_column">Current Address:</string>
+    <string name="pincode">Pincode</string>
+    <string name="landmark">Landmark</string>
+    <string name="landline">Landline</string>
+    <string name="mobile">Phone</string>
+    <string name="living_since">Living Since(in Years)</string>
+    <string name="owned_rented">Owned/Rented</string>
+    <string name="owned">Owned</string>
+    <string name="rented">Rented</string>
+    <string name="permanent_address_is_same">Permanent address is same as current address</string>
+    <string name="permanent_address">Permanent Address</string>
+    <string name="office_address">Office Address</string>
+    <string name="working_since">Working Since</string>
+    <string name="family_profile_income"><![CDATA[Family Profile & Income Details]]></string>
+    <string name="sex">Sex</string>
+    <string name="name_of_member">Name of Member</string>
+    <string name="age">Age</string>
+    <string name="occupation">Occupation</string>
+    <string name="monthly_income">Monthly Income</string>
+    <string name="center_management">Center Management</string>
+    <string name="group_management">Group Management</string>
+    <string name="center_owner_name">Center Owner Name</string>
+    <string name="center_name">Center Name</string>
+    <string name="group_name">Group Name</string>
+    <string name="center_owner_contant">Center Owner Contact Number</string>
+    <string name="branch_name">Branch Name</string>
+    <string name="add_center">Add Center</string>
+    <string name="add_group">Add Group</string>
+    <string name="monthly_household">Monthly Household</string>
+    <string name="bank">Bank</string>
+    <string name="average_monthly_savings">Average Monthly Savings</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="insurance_company">Insurance Company</string>
+    <string name="finance_company">Finance Company</string>
+    <string name="chit_fund">Chit Fund</string>
+    <string name="other_clothes">Other(Clothes/Gadgets)</string>
+    <string name="enter_other_expenses">Enter Other Expenses</string>
+    <string name="total_monthly_expenditure">Total Monthly Expenditure(B)</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="monthly_savings">Monthly Savings</string>
+    <string name="monthly_household_expenditure">Monthly Household Expenditure</string>
+    <string name="rent">Rent</string>
+    <string name="enter_rent_amount">Enter Rent Amount</string>
+    <string name="food_and_fuel"><![CDATA[Food & Fuel]]></string>
+    <string name="food_and_fuel_amount"><![CDATA[Enter Food & Fuel Amount]]></string>
+    <string name="enter_education_expense">Enter Education Expenses</string>
+    <string name="medical">Medical</string>
+    <string name="enter_medical_expense">Enter Medical Expenses</string>
+    <string name="loan_details_mfi">Loan Details(MFI,SHG,Bank,NBFC)</string>
+    <string name="enter_loan_expense">Enter Loan Expenses</string>
+    <string name="no_branches_available">No Branches Available</string>
+    <string name="no_centers_available">No Centers Available</string>
+    <string name="select_center">Select Center</string>
+    <string name="select_branch">Select Branch</string>
+    <string name="existing_loan_details">Existing Loan Details</string>
+    <string name="company_name">Company Name</string>
+    <string name="loan_amount">Loan Amount</string>
+    <string name="loan_amount_column">Loan Amount:</string>
+    <string name="tenure">Tenure</string>
+    <string name="emi_amount">Emi Amount</string>
+    <string name="installment_due">Installment Due</string>
+    <string name="existing_loan">Existing Loan</string>
+    <string name="cheque_details">Cheque Details</string>
+    <string name="applicant">Applicant</string>
+    <string name="name_of_bank">Name of Bank</string>
+    <string name="cheque_no">Cheque Number</string>
+    <string name="coapplicant">Co-Applicant</string>
+    <string name="select_document">Select Document</string>
+    <string name="document_number">Document Number</string>
+    <string name="delete_view">You want to delete this document?</string>
+    <string name="confirm">Confirm</string>
+    <string name="kyc_details">Kyc Details</string>
+    <string name="select_marital_status">Select Marital Status</string>
+    <string name="no_option_available">No Option Available</string>
+    <string name="select_religion">Select Religion</string>
+    <string name="select_payment_cycle">Select Payment Cycle</string>
+    <string name="status">Status:</string>
+    <string name="cibil_status">CIBIL Status:</string>
+    <string name="pending">Pending</string>
+    <string name="approved">Approved</string>
+    <string name="rejected">Rejected</string>
+    <string name="on_hold">On Hold</string>
+    <string name="select_gender">Select Gender</string>
+    <string name="date">Date</string>
+    <string name="customer_id">Customer Id</string>
+    <string name="emp_name">Employee Name</string>
+    <string name="type_of_customer">Type of Customer</string>
+    <string name="group">Select Group</string>
+    <string name="product">Select Product</string>
+    <string name="you_cant_add_more_than_two_images">You Can\'t Add More Than Two Images</string>
+    <string name="coapplicant_name">CoApplicant Name</string>
+    <string name="total_monthly_income">Total Monthly Household Income(A)</string>
+    <string name="declaration">Declaration</string>
+    <string name="applicant_signature">Applicant Signature:</string>
+    <string name="applicant_sign">Applicant Signature</string>
+    <string name="coapplicant_signature">CoApplicant Signature:</string>
+    <string name="employee_signature">Employee Signature:</string>
+    <string name="select_customer_type">Select Customer Type</string>
+    <string name="select_group">Select Group</string>
+    <string name="select_product">Select Product</string>
+    <string name="server_leads">Server Leads</string>
+    <string name="local_leads">Local Leads</string>
+    <string name="my_leads">My Leads</string>
+    <string name="message">Message</string>
+    <string name="your_form_successfully_submitted">Application Form Submitted Succesfully.</string>
+    <string name="are_you_want_to_save_data">Do You Want to Save This Form?</string>
+    <string name="law_order_position">Law and Order Position</string>
+    <string name="remark_of_person">Remark of Person Conducting Survey</string>
+    <string name="fi">FI</string>
+    <string name="appraisal">Appraisal</string>
+    <string name="outstanding_loan_details">Outstanding Loan Details</string>
+    <string name="common_compliance">Common Compliance</string>
+    <string name="common_compliance_and_risk"><![CDATA[Common Compliance & Risk]]></string>
+    <string name="name_of_applicant">Name of Applicant</string>
+    <string name="new_existing_customer">New/Existing Customer</string>
+    <string name="neww">New</string>
+    <string name="existing">Existing</string>
+    <string name="residential_address">Residential Address</string>
+    <string name="name_of_city">Name of City</string>
+    <string name="name_of_landlord">Name of Landlord</string>
+    <string name="landlord_no">Landlord No</string>
+    <string name="rent_agreement">Rent Agreement Available</string>
+    <string name="rent_paid_timely">Is Rent Paid TImely</string>
+    <string name="family_member">No. of Family Member</string>
+    <string name="audit">Audit</string>
+    <string name="child">No. of Child</string>
+    <string name="no_of_dependent">No. of Dependent Member</string>
+    <string name="source_of_income">Source of Income</string>
+    <string name="school_name">Children\'s School Name</string>
+    <string name="school_contact">School Contact No.</string>
+    <string name="school_address">School Address</string>
+    <string name="native_address">Native Address</string>
+    <string name="village_name">Village Name</string>
+    <string name="name_of_coapplicant">Name of Coapplicant</string>
+    <string name="relation">Relation</string>
+    <string name="income_type">Income Type</string>
+    <string name="income">Income</string>
+    <string name="monthly_household_income">Monthly Household Income</string>
+    <string name="no_of_existing_mfi">No. of Existing MFI/SHG Loan</string>
+    <string name="loan">Loan</string>
+    <string name="all_loans_outstanding">All Loans Outstanding</string>
+    <string name="outstanding">Outstanding</string>
+    <string name="monthly_loan_repayment">Monthly Loan Repayment</string>
+    <string name="mfi_shg">(MFI/SHG/BANK/NBFC etc)</string>
+    <string name="loan_applied_at">Loan Applied at Dee Dee Vanijya</string>
+    <string name="applied">Applied</string>
+    <string name="monthly_loan_repayment_to_DD">Monthly Loan Repayment to Dee Dee Vanijya</string>
+    <string name="dues">Dues</string>
+    <string name="overdues_with">Over Dues with MFI/BANK/NBFC/SGHS</string>
+    <string name="surplus">Surplus</string>
+    <string name="compliance_a">Applicant Knows all other members very well and belongs to similar
+        socio enocomic level
+    </string>
+    <string name="compliance_b">Applicant does not have any relative in the JLG</string>
+    <string name="compliance_c">Family members of the applicant do not have any other loan from Dee
+        Dee Vanijya
+    </string>
+    <string name="risk_a">In there any seasonal fluctuation in Income?</string>
+    <string name="risk_b">In the last 6 months has the family members suffered from any major
+        health,death or accident of family member?
+    </string>
+    <string name="risk_c">In the last 6 months has the family suffered from any financial shockdue
+        to loss of job or major loss in business?
+    </string>
+    <string name="risk_d">Spouse/adult member of the family knows about the loan applied for?
+    </string>
+    <string name="risk_e">Does the customer herself/himself provide all financial infomation
+        sought?
+    </string>
+    <string name="risk_f">Will the loan be used for productive purpose?</string>
+    <string name="risk_g">Is the customer\'s spouse less than or up to 50 years old?</string>
+    <string name="risk_h">Has the customer taken any loan in past 3 months?</string>
+    <string name="risk_evaluation">Risk Evaluation</string>
+    <string name="feedback">Feedback</string>
+    <string name="member_name">Member Name</string>
+    <string name="remark_tick">Remark(Choose One Option)</string>
+    <string name="average">Average</string>
+    <string name="best">Best</string>
+    <string name="special_comments">Special Comments</string>
+    <string name="comment">Comment</string>
+    <string name="upload_group_photo">Upload Group Photo</string>
+    <string name="fi_declaration_text">All the collected infomation is true and correct as per the
+        investigation. On the basis of above furnished infomation,I recommend/do not recommend the
+        applicant for further processing of the application.
+    </string>
+    <string name="name_of_field_officer">Name of Field Officer</string>
+    <string name="officer_name">Officer Name</string>
+    <string name="comments_and_feedback"><![CDATA[Comments & Feedback]]></string>
+    <string name="telecalling">Telecalling</string>
+    <string name="place">Place</string>
+    <string name="remark">Remark</string>
+    <string name="delete">Delete</string>
+    <string name="appointment">Appointment</string>
+    <string name="monthly_household_surplus">Monthly Household Surplus</string>
+    <string name="adult">Adult</string>
+    <string name="applicant_name_column">Applicant Name:</string>
+    <string name="native_address_column">Native Address:</string>
+    <string name="added_fi">Added Fi</string>
+    <string name="server_fi">Server FI</string>
+    <string name="local_fi">Local FI</string>
+    <string name="applicants_id_number">Applicant\'s Id Number</string>
+    <string name="cgt">CGT</string>
+    <string name="question">Question</string>
+    <string name="group_photo">Group Photo</string>
+    <string name="day1">Day One</string>
+    <string name="day2">Day Two</string>
+    <string name="please_select_group_photo">Please Select Group Photo.</string>
+    <string name="rent_amount">Rent Amount</string>
+    <string name="phone_1">Phone 1</string>
+    <string name="phone_2">Phone 2</string>
+    <string name="fi_form_successfully_submitted">Fi Form Submitted Successfully.</string>
+    <string name="locality_form_successfully_submitted">Locality Form Submitted Successfully.
+    </string>
+    <string name="grt_successfully_submitted">GRT Submitted Successfully.</string>
+    <string name="test_details">Test Details</string>
+    <string name="result">Result</string>
+    <string name="recommended">Recommended For Loan</string>
+    <string name="group_test_details">Group Test Details</string>
+
+
+    <!--GRT Questions-->
+    <string name="grt_question_1">1 Have all the members arrived on time?</string>
+    <string name="grt_question_2">2 Do all the member in the group fulfil the basic our eligibility
+        criteria.
+    </string>
+    <string name="grt_question_2.1">2.1 Married/Widowed with heirs?</string>
+    <string name="grt_question_2.2">2.2 Between 18-55 years?</string>
+    <string name="grt_question_2.3">2.3 Income(in Rs.)</string>
+    <string name="grt_question_2.4">2.4 Good Credit History?</string>
+    <string name="grt_question_2.5">2.5 No blood relation</string>
+    <string name="grt_question_2.6">2.6 Permanent Resident</string>
+    <string name="grt_question_2.7">2.7 Criminal Background(Herself/Family member)</string>
+    <string name="grt_question_2.8">2.8 Suffering from any chronic disease?</string>
+    <string name="grt_question_3">3 Do they remember the pledge?</string>
+    <string name="grt_question_4">4 Do member understand their joint liability for their group
+        members loan?
+    </string>
+    <string name="grt_question_5">5 Are members well familier about out products?</string>
+    <string name="grt_question_6">6 Do members know the interest rates?</string>
+    <string name="grt_question_7">7 Do members know about repayment terms and conditions?</string>
+    <string name="grt_question_8">8 Do members understand and accept their rights and responsibilies
+        as members?
+    </string>
+    <string name="grt_question_9">9 Do members voluntarily accept membership?</string>
+    <string name="grt_question_10">10 Do they accept the leadership?</string>
+    <string name="grt">GRT</string>
+    <string name="leader_name_column">Leader Name:</string>
+    <string name="group_name_column">Group Name:</string>
+    <string name="number_of_member_column">Number of Member:</string>
+    <string name="leader_contact_column">Leader Contact No:</string>
+    <string name="no_members_available">No Members Available.</string>
+    <string name="my_group">My Groups</string>
+    <string name="my_centers">Centers</string>
+    <string name="group_passed">Group Passed:</string>
+    <string name="recommended_for_gt">Recommended for another GT</string>
+    <string name="cite_reason">Cite Reason</string>
+    <string name="bm_remarks">BM Remarks</string>
+    <string name="bm_name">BM Name</string>
+    <string name="center_leader">Center Leader Preferred</string>
+    <string name="c_l_signature">C.L. Signature</string>
+    <string name="b_m_signature">B.M. Signature</string>
+    <string name="recommended_not_recommended">Recommended/Not Recommended for Loan</string>
+    <string name="husbands_father_name">Husband\'s Father Name</string>
+    <string name="doc_type">Document Type</string>
+    <string name="select_document1">Select Document 1</string>
+    <string name="select_document2">Select Document 2</string>
+    <string name="doc1_number">Document 1 Number</string>
+    <string name="doc2_number">Document 2 Number</string>
+    <string name="select_document_type">Select Document Type</string>
+    <string name="please_enter_pincode">Please Enter Pincode</string>
+    <string name="please_enter_loan_amount">Please Enter Loan Amount</string>
+    <string name="please_enter_doc_type1">Please Select Document 1 Type</string>
+    <string name="please_enter_doc_type2">Please Select Document 2 Type</string>
+    <string name="please_enter_doc_type1_number">Please Enter Document 2 Number</string>
+    <string name="please_enter_doc_type2_number">Please Enter Document 2 Number</string>
+    <string name="relative">Relative</string>
+    <string name="check_declaration_box">You have to check the declaration box to proceed furthur.</string>
+    <string name="family_member_1">Family Member 1</string>
+    <string name="family_member_2">Family Member 2</string>
+    <string name="profile">My Profile</string>
+    <string name="set_server">Set Server</string>
+    <string name="select_server">Select Server</string>
+    <string name="k_number">K number</string>
+    <string name="recovery">Recovery</string>
+    <string name="details_of_group">Details of Group</string>
+    <string name="colony_name">Colony Name</string>
+    <string name="ward_number">Ward Number</string>
+    <string name="cheque">Cheque</string>
+    <string name="own">OWN</string>
+    <string name="son">SON</string>
+    <string name="husband">HUSBAND</string>
+    <string name="relationship">Relationship</string>
+    <string name="bill_name">Bill Name</string>
+    <string name="utility_bill">Utility Bill</string>
+    <string name="area">Area</string>
+    <string name="city">City</string>
+    <string name="user_area_list">User Area</string>
+    <string name="house_photo">House Photo</string>
+    <string name="self">Self</string>
+    <string name="group_listing">Group Listing</string>
+    <string name="emi_collection">Emi Collection</string>
+    <string name="group_leader_name">Group Leader Name</string>
+    <string name="leader_number">Leader Contact Number</string>
+    <string name="emi_collection_date">Emi Collection\nDate Time</string>
+    <string name="action">Action</string>
+    <string name="lead_id">Lead ID:</string>
+    <string name="contact_no">Contact No.</string>
+    <string name="dead">Dead</string>
+    <string name="view_details">Details</string>
+    <string name="installment_no">Installment No.</string>
+    <string name="emi_date">EMI Date</string>
+    <string name="pending_amount">Pending Amount</string>
+    <string name="delay_charges">Delay Charges</string>
+    <string name="delay_days">Delay Days</string>
+    <string name="collected_amount">Collected Amount</string>
+    <string name="collected_delay_charge">Collected Delay Charges</string>
+    <string name="signature">Signature</string>
+    <string name="collected_from">Collected From</string>
+    <string name="collected_self">Collected By Self</string>
+    <string name="present">Present at Center</string>
+    <string name="part_payment">Part Payment</string>
+    <string name="pending_emi_amount">Pending Emi Amount</string>
+    <string name="total_charges">Total Charges</string>
+    <string name="notes">Notes</string>
+    <string name="delay_charge_collected">Delay Charge Collected</string>
+    <string name="collected_date">Collected Date</string>
+    <string name="phone_call_error">Something went wrong when make call in your phone.</string>
+    <string name="select_bank">Select Bank</string>
+    <string name="select_cobank">Select Co-Applicant Bank</string>
+    <string name="enter_dob">Please enter date of birth.</string>
+    <string name="enter_education">Enter Education</string>
+    <string name="add_coapplicant_image">Please add CoApplicant Image.</string>
+    <string name="enter_father_name">Enter father name.</string>
+    <string name="enter_purposeofloan">Select purpose of loan</string>
+    <string name="enter_city">Please enter city</string>
+    <string name="enter_landline">Enter landline number</string>
+    <string name="enter_mobile">Please enter mobile number.</string>
+    <string name="enter_living_since">Please enter living since in years</string>
+    <string name="others">Others</string>
+    <string name="select_purpose_of_loan">Select purpose of loan</string>
+    <string name="select_company_name">Select company</string>
+    <string name="select_relation">Select Relation</string>
+    <string name="data_saved_successfully">Data saved successfully.</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="household_photo">Household Photo</string>
+    <string name="please_enter_household_photo">Please enter household photo</string>
+    <string name="please_enter_city">Please Enter City</string>
+    <string name="please_enter_no_of_family_members">Please Enter No. Of Family Members</string>
+    <string name="please_enter_audit">Please Enter Audit</string>
+    <string name="please_enter_coapplicant_name">Please Enter Co-Applicant Name</string>
+    <string name="please_select_living_since">Please Select living since.</string>
+    <string name="crash_toast_text">DeeDee App Crash. Please send a report to fix the crash.</string>
+    <string name="gps_network_not_enabled">Allow "DeeDee" to access your location while you use the app?</string>
+    <string name="open_location_settings">Enable Location Setting</string>
+    <string name="cancel">Cancel</string>
+    <!--...........    ................-->
+
+
+    <string-array name="grt_test_question_arr">
+        <item>1 Have all the members arrived on time?</item>
+        <item>2 Do all the member in the group fulfil the basic our eligibility criteria.</item>
+        <item>2.1 Married/Widowed with heirs?</item>
+        <item>2.2 Between 18-55 years?</item>
+        <item>2.3 Income(in Rs.)</item>
+        <item>2.4 Good Credit History?</item>
+        <item>2.5 No blood relation</item>
+        <item>2.6 Permanent Resident</item>
+        <item>2.7 Criminal Background(Herself/Family member)</item>
+        <item>2.8 Suffering from any chronic disease?</item>
+        <item>3 Do they remember the pledge?</item>
+        <item>4 Do member understand their joint liability for their group members loan?</item>
+        <item>5 Are members well familier about out products?</item>
+        <item>6 Do members know the interest rates?</item>
+        <item>7 Do members know about repayment terms and conditions?</item>
+        <item>8 Do members understand and accept their rights and responsibilies as members?</item>
+        <item>9 Do members voluntarily accept membership?</item>
+        <item>10 Do they accept the leadership?</item>
+
+    </string-array>
+
+
+    <string-array name="price_sorting_arr">
+        <item>Price Low to High</item>
+        <item>Price High to Low</item>
+    </string-array>
+
+    <string-array name="gender_arr">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <!--<string-array name="kyc_docuemnt_types">-->
+    <!--<item>Aadhar Card</item>-->
+    <!--<item>Voter Id</item>-->
+    <!--<item>Bank Statement</item>-->
+    <!--<item>Ration Card</item>-->
+    <!--<item>Pan Card</item>-->
+    <!--<item>Driving Licence</item>-->
+    <!--<item>Electricity/Water Bill</item>-->
+    <!--<item>Rent Agreement</item>-->
+    <!--<item>Others</item>-->
+    <!--</string-array>-->
+
+    <string-array name="kyc_docuemnt_types">
+        <item>Applicant Name</item>
+        <item>Co-Applicant Name</item>
+        <!--<item>Others</item>-->
+        <!--<item>Ration Card</item>-->
+        <!--<item>Pan Card</item>-->
+        <!--<item>Driving Licence</item>-->
+        <!--<item>Electricity/Water Bill</item>-->
+        <!--<item>Rent Agreement</item>-->
+        <item>Others</item>
+    </string-array>
+
+
+    <string-array name="enquiry_docuemnt_types">
+        <item>Aadhar Card</item>
+        <item>Voter ID</item>
+        <item>Driving Licence</item>
+        <item>Ration Card</item>
+        <item>Bhamashah Card</item>
+        <item>Pan Card</item>
+        <item>Others</item>
+    </string-array>
+
+    <string-array name="server_arr">
+        <item>dee</item>
+        <item>ddv</item>
+    </string-array>
+
+    <string-array name="collected_from_arr">
+        <item>Center</item>
+        <item>Home</item>
+        <item>Other</item>
+    </string-array>
+
+
+</resources>

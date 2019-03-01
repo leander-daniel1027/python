@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/dp10"
+>
+
+    <com.customviews.CustomTextView
+        android:id="@+id/tv_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp10"
+        android:text="@string/select_document"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/textLarge"
+        app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM"/>
+
+
+    <FrameLayout
+        android:id="@+id/dropdownLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_select"
+        android:paddingBottom="@dimen/dp20"
+        android:paddingLeft="@dimen/dp30"
+        android:paddingRight="@dimen/dp30"
+        android:paddingTop="@dimen/dp20">
+
+
+        <com.customviews.CustomEditText
+            android:id="@+id/et_documentSelector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext_pink"
+            android:clickable="true"
+            android:drawableRight="@mipmap/drop_icon_gold"
+            android:editable="false"
+            android:focusable="false"
+            android:gravity="center"
+            android:hint="@string/select_document"
+            android:inputType="none"
+            android:paddingRight="@dimen/dp10"
+            android:textColor="@color/color_black"
+            android:textColorHint="@color/editTextHintColor"
+            android:textSize="@dimen/textLarge"
+            app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM"/>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:layout_below="@+id/dropdownLayout"
+        android:background="@color/colorWhite"/>
+
+    <ScrollView
+        android:id="@+id/childScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/divider">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_marginTop="@dimen/dp10"
+                android:id="@+id/img_housephoto"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="@dimen/dp140"
+                android:layout_height="@dimen/dp140"
+                android:background="@drawable/bg_edittext_pink"
+                android:padding="@dimen/dp20"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/default_image"
+                />
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/txt_documentname"
+                android:padding="@dimen/dp2"
+                android:visibility="visible"
+                android:text="@string/household_photo"
+                android:textColor="@color/colorWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/documentItems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:orientation="vertical"
+            ></LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

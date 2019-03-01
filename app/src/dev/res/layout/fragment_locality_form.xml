@@ -1,0 +1,1118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/splash_bg"
+    android:clickable="true">
+
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical">
+
+        <HorizontalScrollView android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:scrollbars="none">
+
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="@dimen/dp45"
+                          android:background="@color/colorHomeButton"
+                          android:orientation="horizontal">
+
+                <com.customviews.CustomTextView
+                    android:id="@+id/tv_village_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dp30"
+                    android:paddingRight="@dimen/dp30"
+                    android:text="@string/village_info"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/textSmall"
+                    app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM  "/>
+                <View android:layout_width="0.5dp"
+                      android:layout_height="match_parent"
+                      android:background="@color/colorAccent"/>
+
+
+                <com.customviews.CustomTextView
+                    android:id="@+id/tv_village_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dp30"
+                    android:paddingRight="@dimen/dp30"
+                    android:text="@string/village_detail"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/textSmall"
+                    app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM"/>
+
+                <View android:layout_width="0.5dp"
+                      android:layout_height="match_parent"
+                      android:background="@color/colorAccent"/>
+
+                <com.customviews.CustomTextView
+                    android:id="@+id/tv_mfi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dp30"
+                    android:paddingRight="@dimen/dp30"
+                    android:text="@string/mfi_operating"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/textSmall"
+                    app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM"/>
+                <View android:layout_width="0.5dp"
+                      android:layout_height="match_parent"
+                      android:background="@color/colorAccent"/>
+
+
+                <com.customviews.CustomTextView
+                    android:id="@+id/tv_activities"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dp30"
+                    android:paddingRight="@dimen/dp30"
+                    android:text="@string/activities"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/textSmall"
+                    app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM"/>
+
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+
+        <ScrollView android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fillViewport="true"
+                    android:scrollbars="none">
+
+
+            <RelativeLayout android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/dp10">
+
+                <LinearLayout
+                    android:id="@+id/ll_village_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:orientation="vertical">
+
+                    <com.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:text="@string/village_information"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/textLarge"
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:layout_marginTop="@dimen/dp10"
+                                  android:orientation="horizontal"
+                                  android:weightSum="1">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5"
+                            android:textColorHint="@color/colorWhite">
+
+                            <com.customviews.CustomEditText
+                                android:id="@+id/et_village_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/village_locality"
+                                android:imeOptions="actionNext"
+                                android:inputType="text"
+                                android:padding="@dimen/dp15"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/textMedium"
+                                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                            />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp5"
+                            android:layout_weight=".5"
+                            android:textColorHint="@color/colorWhite">
+
+                            <com.customviews.CustomEditText
+                                android:id="@+id/et_block_area"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/block_area"
+                                android:imeOptions="actionNext"
+                                android:inputType="text"
+                                android:padding="@dimen/dp15"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/textMedium"
+                                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                            />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:layout_marginTop="@dimen/dp10"
+                                  android:orientation="horizontal"
+                                  android:weightSum="1">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5"
+                            android:textColorHint="@color/colorWhite">
+
+                            <com.customviews.CustomEditText
+                                android:id="@+id/et_tehsil_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/tehsil_taluka_subdivision"
+                                android:imeOptions="actionNext"
+                                android:inputType="text"
+                                android:padding="@dimen/dp15"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/textMedium"
+                                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                            />
+                        </android.support.design.widget.TextInputLayout>
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp5"
+                            android:layout_weight=".5"
+                            android:textColorHint="@color/colorWhite">
+
+                            <com.customviews.CustomEditText
+                                android:id="@+id/et_post_office"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/post_office"
+                                android:imeOptions="actionNext"
+                                android:inputType="text"
+                                android:padding="@dimen/dp15"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/textMedium"
+                                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                            />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:layout_marginTop="@dimen/dp10"
+                                  android:orientation="horizontal"
+                                  android:weightSum="1">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5"
+                            android:textColorHint="@color/colorWhite">
+
+                            <com.customviews.CustomEditText
+                                android:id="@+id/et_police_station"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/police_station"
+                                android:imeOptions="actionNext"
+                                android:inputType="text"
+                                android:padding="@dimen/dp15"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/textMedium"
+                                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                            />
+                        </android.support.design.widget.TextInputLayout>
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp5"
+                            android:layout_weight=".5"
+                            android:textColorHint="@color/colorWhite">
+
+                            <com.customviews.CustomEditText
+                                android:id="@+id/et_district"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/district"
+                                android:imeOptions="actionNext"
+                                android:inputType="text"
+                                android:padding="@dimen/dp15"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/textMedium"
+                                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                            />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:layout_marginTop="@dimen/dp10"
+                                  android:orientation="horizontal"
+                                  android:weightSum="1">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5"
+                            android:textColorHint="@color/colorWhite">
+
+                            <com.customviews.CustomEditText
+                                android:id="@+id/et_state"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/state"
+                                android:imeOptions="actionDone"
+                                android:inputType="text"
+                                android:padding="@dimen/dp15"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/textMedium"
+                                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                            />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_village_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:text="@string/village_detail"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/textLarge"
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+
+                    <com.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:text="@string/no_of_household"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/textSmall"
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:layout_marginTop="@dimen/dp5"
+                                  android:orientation="horizontal"
+                                  android:weightSum="1">
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:layout_weight=".5"
+                            android:textColorHint="@color/colorWhite">
+
+                            <com.customviews.CustomEditText
+                                android:id="@+id/et_household_kachcha"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/kachcha"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:padding="@dimen/dp15"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/textMedium"
+                                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                            />
+                        </android.support.design.widget.TextInputLayout>
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:layout_weight=".5"
+                            android:textColorHint="@color/colorWhite">
+
+                            <com.customviews.CustomEditText
+                                android:id="@+id/et_household_pakka"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/pakka"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:padding="@dimen/dp15"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/textMedium"
+                                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                            />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+
+                    <com.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:text="@string/community_composition"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/textSmall"
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:layout_marginTop="@dimen/dp5"
+                                  android:orientation="horizontal"
+                                  android:weightSum="1">
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".25"
+                            android:textColorHint="@color/colorWhite">
+
+                            <com.customviews.CustomEditText
+                                android:id="@+id/et_general"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:hint="@string/gen"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:padding="@dimen/dp15"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/textMedium"
+                                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                            />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".25"
+                            android:textColorHint="@color/colorWhite">
+
+                            <com.customviews.CustomEditText
+                                android:id="@+id/et_obc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:hint="@string/obc"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:padding="@dimen/dp15"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/textMedium"
+                                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                            />
+                        </android.support.design.widget.TextInputLayout>
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".25"
+                            android:textColorHint="@color/colorWhite">
+
+                            <com.customviews.CustomEditText
+                                android:id="@+id/et_sc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:hint="@string/sc"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:padding="@dimen/dp15"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/textMedium"
+                                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                            />
+                        </android.support.design.widget.TextInputLayout>
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".25"
+                            android:textColorHint="@color/colorWhite">
+
+                            <com.customviews.CustomEditText
+                                android:id="@+id/et_st"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:hint="@string/st"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:padding="@dimen/dp15"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/textMedium"
+                                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                            />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+
+
+                    <com.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:lineSpacingExtra="@dimen/dp2"
+                        android:text="@string/distance_from_branch"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/textSmall"
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+
+
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:layout_marginTop="@dimen/dp5"
+                                  android:orientation="horizontal"
+                                  android:weightSum="1">
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:layout_weight=".5"
+                            android:textColorHint="@color/colorWhite">
+
+                            <com.customviews.CustomEditText
+                                android:id="@+id/et_distance_branch"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/distance_branch"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:padding="@dimen/dp15"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/textMedium"
+                                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                            />
+                        </android.support.design.widget.TextInputLayout>
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:layout_weight=".5"
+                            android:textColorHint="@color/colorWhite">
+
+                            <com.customviews.CustomEditText
+                                android:id="@+id/et_distance_mainroad"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/distance_mainroad"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:padding="@dimen/dp15"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/textMedium"
+                                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                            />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <com.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:lineSpacingExtra="@dimen/dp2"
+                        android:text="@string/distance_from_operating"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/textSmall"
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:layout_marginTop="@dimen/dp5"
+                                  android:orientation="horizontal"
+                                  android:weightSum="1">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:layout_weight=".5"
+                            android:textColorHint="@color/colorWhite">
+
+                            <com.customviews.CustomEditText
+                                android:id="@+id/et_ope_village_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/name"
+                                android:imeOptions="actionNext"
+                                android:inputType="text"
+                                android:padding="@dimen/dp15"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/textMedium"
+                                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                            />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:layout_weight=".5"
+                            android:textColorHint="@color/colorWhite">
+
+                            <com.customviews.CustomEditText
+                                android:id="@+id/et_ope_village_distance"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity=""
+                                android:hint="@string/distance"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:padding="@dimen/dp15"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/textMedium"
+                                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                            />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <com.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:lineSpacingExtra="@dimen/dp2"
+                        android:text="@string/road_connectivity"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/textSmall"
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+
+                    <RadioGroup
+                        android:id="@+id/rg_road_connectivity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_good"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:paddingLeft="@dimen/dp10"
+                            android:text="@string/good"
+                            android:textColor="@color/colorWhite"/>
+                        <RadioButton
+                            android:id="@+id/rb_bad"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp20"
+                            android:paddingLeft="@dimen/dp10"
+                            android:text="@string/bad"
+                            android:textColor="@color/colorWhite"/>
+
+
+                    </RadioGroup>
+
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:layout_marginTop="@dimen/dp10"
+                                  android:orientation="horizontal"
+                                  android:visibility="gone"
+                                  android:weightSum="1">
+
+                        <CheckBox
+                            android:id="@+id/cb_road_connectivity_good"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/dp5"
+                            android:text="@string/good"
+                            android:textColor="@color/colorWhite"/>
+
+                        <CheckBox
+                            android:id="@+id/cb_road_connectivity_bad"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp20"
+                            android:paddingLeft="@dimen/dp5"
+                            android:text="@string/bad"
+                            android:textColor="@color/colorWhite"/>
+
+
+                    </LinearLayout>
+
+                    <com.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp15"
+                        android:lineSpacingExtra="@dimen/dp2"
+                        android:text="@string/hospitals_primary"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/textSmall"
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+
+
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:layout_marginTop="@dimen/dp10"
+                                  android:orientation="horizontal"
+                                  android:weightSum="1">
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:layout_weight=".33"
+                            android:textColorHint="@color/colorWhite">
+
+                            <com.customviews.CustomEditText
+                                android:id="@+id/et_hospital_private"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/private_"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:padding="@dimen/dp15"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/textMedium"
+                                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                            />
+                        </android.support.design.widget.TextInputLayout>
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:layout_weight=".33"
+                            android:textColorHint="@color/colorWhite">
+
+                            <com.customviews.CustomEditText
+                                android:id="@+id/et_hospital_govt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/govt"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:padding="@dimen/dp15"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/textMedium"
+                                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                            />
+                        </android.support.design.widget.TextInputLayout>
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:layout_weight=".33"
+                            android:textColorHint="@color/colorWhite">
+
+                            <com.customviews.CustomEditText
+                                android:id="@+id/et_distance_hospital"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/distance"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:padding="@dimen/dp15"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/textMedium"
+                                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                            />
+                        </android.support.design.widget.TextInputLayout>
+
+
+                    </LinearLayout>
+
+                    <com.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:lineSpacingExtra="@dimen/dp2"
+                        android:text="@string/schools"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/textSmall"
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+
+
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:layout_marginTop="@dimen/dp10"
+                                  android:orientation="horizontal"
+                                  android:weightSum="1">
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:layout_weight=".33"
+                            android:textColorHint="@color/colorWhite">
+
+                            <com.customviews.CustomEditText
+                                android:id="@+id/et_school_private"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/private_"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:padding="@dimen/dp15"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/textMedium"
+                                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                            />
+                        </android.support.design.widget.TextInputLayout>
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:layout_weight=".33"
+                            android:textColorHint="@color/colorWhite">
+
+                            <com.customviews.CustomEditText
+                                android:id="@+id/et_school_govt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/govt"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:padding="@dimen/dp15"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/textMedium"
+                                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                            />
+                        </android.support.design.widget.TextInputLayout>
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:layout_weight=".33"
+                            android:textColorHint="@color/colorWhite">
+
+                            <com.customviews.CustomEditText
+                                android:id="@+id/et_distance_school"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/distance"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:padding="@dimen/dp15"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/textMedium"
+                                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                            />
+                        </android.support.design.widget.TextInputLayout>
+
+
+                    </LinearLayout>
+
+
+                    <com.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:lineSpacingExtra="@dimen/dp2"
+                        android:text="@string/name_of_service_banks"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/textSmall"
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:textColorHint="@color/colorWhite">
+
+                        <com.customviews.CustomEditText
+                            android:id="@+id/et_service_bank"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/bank_name"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:padding="@dimen/dp15"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/textMedium"
+                            app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                        />
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <com.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:lineSpacingExtra="@dimen/dp2"
+                        android:text="@string/credit_history_of_village"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/textSmall"
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:textColorHint="@color/colorWhite">
+
+                        <com.customviews.CustomEditText
+                            android:id="@+id/et_credit_history"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/credit_history"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:padding="@dimen/dp15"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/textMedium"
+                            app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                        />
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <com.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:lineSpacingExtra="@dimen/dp2"
+                        android:text="@string/political_influence"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/textSmall"
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:textColorHint="@color/colorWhite">
+
+                        <com.customviews.CustomEditText
+                            android:id="@+id/et_political_influence"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/total_parties"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:padding="@dimen/dp15"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/textMedium"
+                            app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                        />
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <com.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:lineSpacingExtra="@dimen/dp2"
+                        android:text="@string/major_livelyhood"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/textSmall"
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:textColorHint="@color/colorWhite">
+
+                        <com.customviews.CustomEditText
+                            android:id="@+id/et_major_livelihood"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/total_activity"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:padding="@dimen/dp15"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/textMedium"
+                            app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                        />
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <com.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:lineSpacingExtra="@dimen/dp2"
+                        android:text="@string/main_crops"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/textSmall"
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:textColorHint="@color/colorWhite">
+
+                        <com.customviews.CustomEditText
+                            android:id="@+id/et_main_crops"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:padding="@dimen/dp15"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/textMedium"
+                            app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                        />
+                    </android.support.design.widget.TextInputLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_mfi_operating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:text="@string/mfi_operating"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/textLarge"
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_mfi_view_containor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_activities"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:text="@string/activities"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/textLarge"
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_activities_m_e_view_containor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:background="@drawable/bg_transparent_layout"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_activities_o_m_e_view_containor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:background="@drawable/bg_transparent_layout"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_locality_images_containor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:textColorHint="@color/colorWhite">
+
+                        <com.customviews.CustomEditText
+                            android:id="@+id/et_law_order_position"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/law_order_position"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:padding="@dimen/dp15"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/textMedium"
+                            app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                        />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:textColorHint="@color/colorWhite">
+
+                        <com.customviews.CustomEditText
+                            android:id="@+id/et_remark_of_person"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/remark_of_person"
+                            android:imeOptions="actionDone"
+                            android:inputType="textMultiLine"
+                            android:lines="4"
+                            android:padding="@dimen/dp15"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/textMedium"
+                            app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                        />
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <com.customviews.CustomTextView
+                        android:id="@+id/tv_save"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/dp30"
+                        android:background="@drawable/bg_btn_pink"
+                        android:elevation="@dimen/dp5"
+                        android:gravity="center"
+                        android:text="@string/save"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/textLarge"
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

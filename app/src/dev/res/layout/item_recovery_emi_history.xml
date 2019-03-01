@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="@dimen/dp5"
+                  android:background="@drawable/bg_rounded_white_stroke"
+                  android:orientation="vertical">
+
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:weightSum="1">
+
+            <com.customviews.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".25"
+                android:background="@color/colorAccent"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:padding="@dimen/dp10"
+                android:text="@string/installment_no"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/textExtraSmall"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+            <View android:layout_width="1dp"
+                  android:layout_height="match_parent"
+                  android:background="@color/colorWhite"/>
+
+
+            <com.customviews.CustomTextView
+                android:id="@+id/tv_installment_no"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".25"
+                android:background="@color/transparent_white"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:padding="@dimen/dp10"
+                android:text="0"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textSmall"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+            <View android:layout_width="1dp"
+                  android:layout_height="match_parent"
+                  android:background="@color/colorWhite"/>
+
+
+            <com.customviews.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".25"
+                android:background="@color/colorAccent"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:padding="@dimen/dp10"
+                android:text="@string/emi_date"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/textExtraSmall"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+            <View android:layout_width="1dp"
+                  android:layout_height="match_parent"
+                  android:background="@color/colorWhite"/>
+
+            <com.customviews.CustomTextView
+                android:id="@+id/tv_emi_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:background="@color/transparent_white"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:padding="@dimen/dp10"
+                android:text="0"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textExtraSmall"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+
+
+        </LinearLayout>
+
+        <View android:layout_width="match_parent"
+              android:layout_height="@dimen/dp1"
+              android:background="@color/colorWhite"/>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:weightSum="1">
+
+            <com.customviews.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:background="@color/colorAccent"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:padding="@dimen/dp10"
+                android:text="@string/emi_amount"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/textExtraSmall"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+            <View android:layout_width="1dp"
+                  android:layout_height="match_parent"
+                  android:background="@color/colorWhite"/>
+
+
+            <com.customviews.CustomTextView
+                android:id="@+id/tv_emi_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:background="@color/transparent_white"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:padding="@dimen/dp10"
+                android:text="0"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textExtraSmall"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+            <View android:layout_width="1dp"
+                  android:layout_height="match_parent"
+                  android:background="@color/colorWhite"/>
+
+
+            <com.customviews.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:background="@color/colorAccent"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:padding="@dimen/dp10"
+                android:text="@string/part_payment"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/textExtraSmall"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+            <View android:layout_width="1dp"
+                  android:layout_height="match_parent"
+                  android:background="@color/colorWhite"/>
+
+            <com.customviews.CustomTextView
+                android:id="@+id/tv_part_payment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:background="@color/transparent_white"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:padding="@dimen/dp10"
+                android:text="0"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textExtraSmall"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+
+
+        </LinearLayout>
+
+        <View android:layout_width="match_parent"
+              android:layout_height="@dimen/dp1"
+              android:background="@color/colorWhite"/>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:weightSum="1">
+
+            <com.customviews.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:background="@color/colorAccent"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:padding="@dimen/dp10"
+                android:text="@string/pending_emi_amount"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/textExtraSmall"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+            <View android:layout_width="1dp"
+                  android:layout_height="match_parent"
+                  android:background="@color/colorWhite"/>
+
+
+            <com.customviews.CustomTextView
+                android:id="@+id/tv_pending_emi_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:background="@color/transparent_white"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:padding="@dimen/dp10"
+                android:text="0"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textExtraSmall"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+            <View android:layout_width="1dp"
+                  android:layout_height="match_parent"
+                  android:background="@color/colorWhite"/>
+
+
+            <com.customviews.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:background="@color/colorAccent"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:padding="@dimen/dp10"
+                android:text="@string/delay_days"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/textExtraSmall"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+            <View android:layout_width="1dp"
+                  android:layout_height="match_parent"
+                  android:background="@color/colorWhite"/>
+
+            <com.customviews.CustomTextView
+                android:id="@+id/tv_delay_days"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:background="@color/transparent_white"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:padding="@dimen/dp10"
+                android:text="0"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textExtraSmall"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+
+
+        </LinearLayout>
+
+        <View android:layout_width="match_parent"
+              android:layout_height="@dimen/dp1"
+              android:background="@color/colorWhite"/>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:weightSum="1">
+
+            <com.customviews.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:background="@color/colorAccent"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:padding="@dimen/dp10"
+                android:text="@string/delay_charges"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/textExtraSmall"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+            <View android:layout_width="1dp"
+                  android:layout_height="match_parent"
+                  android:background="@color/colorWhite"/>
+
+
+            <com.customviews.CustomTextView
+                android:id="@+id/tv_delay_charges"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:background="@color/transparent_white"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:padding="@dimen/dp10"
+                android:text="0"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textExtraSmall"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+            <View android:layout_width="1dp"
+                  android:layout_height="match_parent"
+                  android:background="@color/colorWhite"/>
+
+
+            <com.customviews.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:background="@color/colorAccent"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:padding="@dimen/dp10"
+                android:text="@string/total_charges"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/textExtraSmall"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+            <View android:layout_width="1dp"
+                  android:layout_height="match_parent"
+                  android:background="@color/colorWhite"/>
+
+            <com.customviews.CustomTextView
+                android:id="@+id/tv_total_charges"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:background="@color/transparent_white"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:padding="@dimen/dp10"
+                android:text="0"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textExtraSmall"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+
+
+        </LinearLayout>
+
+        <View android:layout_width="match_parent"
+              android:layout_height="@dimen/dp1"
+              android:background="@color/colorWhite"/>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:weightSum="1">
+
+            <com.customviews.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:background="@color/colorAccent"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:padding="@dimen/dp10"
+                android:text="@string/notes"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/textExtraSmall"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+            <View android:layout_width="1dp"
+                  android:layout_height="match_parent"
+                  android:background="@color/colorWhite"/>
+
+
+            <com.customviews.CustomTextView
+                android:id="@+id/tv_notes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:background="@color/transparent_white"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:padding="@dimen/dp10"
+                android:text="0"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textExtraSmall"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+            <View android:layout_width="1dp"
+                  android:layout_height="match_parent"
+                  android:background="@color/colorWhite"/>
+
+
+            <com.customviews.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:background="@color/colorAccent"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:padding="@dimen/dp10"
+                android:text="@string/collected_amount"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/textExtraSmall"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+            <View android:layout_width="1dp"
+                  android:layout_height="match_parent"
+                  android:background="@color/colorWhite"/>
+
+            <com.customviews.CustomTextView
+                android:id="@+id/tv_collected_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:background="@color/transparent_white"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:padding="@dimen/dp10"
+                android:text="0"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textExtraSmall"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+
+
+        </LinearLayout>
+
+        <View android:layout_width="match_parent"
+              android:layout_height="@dimen/dp1"
+              android:background="@color/colorWhite"/>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:weightSum="1">
+
+            <com.customviews.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:background="@color/colorAccent"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:padding="@dimen/dp10"
+                android:text="@string/delay_charge_collected"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/textExtraSmall"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+            <View android:layout_width="1dp"
+                  android:layout_height="match_parent"
+                  android:background="@color/colorWhite"/>
+
+
+            <com.customviews.CustomTextView
+                android:id="@+id/tv_delay_charge_collected"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:background="@color/transparent_white"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:padding="@dimen/dp10"
+                android:text="0"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textExtraSmall"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+            <View android:layout_width="1dp"
+                  android:layout_height="match_parent"
+                  android:background="@color/colorWhite"/>
+
+
+            <com.customviews.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:background="@color/colorAccent"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:padding="@dimen/dp10"
+                android:text="@string/collected_date"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/textExtraSmall"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+            <View android:layout_width="1dp"
+                  android:layout_height="match_parent"
+                  android:background="@color/colorWhite"/>
+
+            <com.customviews.CustomTextView
+                android:id="@+id/tv_collected_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:background="@color/transparent_white"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:padding="@dimen/dp10"
+                android:text="0"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textExtraSmall"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+
+
+        </LinearLayout>
+
+        <View android:layout_width="match_parent"
+              android:layout_height="@dimen/dp1"
+              android:background="@color/colorWhite"/>
+
+<LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:weightSum="1">
+
+            <com.customviews.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:background="@color/colorAccent"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:padding="@dimen/dp10"
+                android:text="@string/signature"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/textExtraSmall"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+            <View android:layout_width="1dp"
+                  android:layout_height="match_parent"
+                  android:background="@color/colorWhite"/>
+
+
+            <com.customviews.CustomTextView
+                android:id="@+id/tv_signature"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:background="@color/transparent_white"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:padding="@dimen/dp10"
+                android:text="0"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textExtraSmall"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+            <View android:layout_width="1dp"
+                  android:layout_height="match_parent"
+                  android:background="@color/colorWhite"/>
+
+
+            <com.customviews.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:background="@color/colorAccent"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:padding="@dimen/dp10"
+                android:text="@string/collected_from"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/textExtraSmall"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+            <View android:layout_width="1dp"
+                  android:layout_height="match_parent"
+                  android:background="@color/colorWhite"/>
+
+            <com.customviews.CustomTextView
+                android:id="@+id/tv_collected_from"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:background="@color/transparent_white"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:padding="@dimen/dp10"
+                android:text="0"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textExtraSmall"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+
+
+        </LinearLayout>
+
+        <View android:layout_width="match_parent"
+              android:layout_height="@dimen/dp1"
+              android:background="@color/colorWhite"/>
+
+<LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:weightSum="1">
+
+            <com.customviews.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:background="@color/colorAccent"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:padding="@dimen/dp10"
+                android:text="@string/collected_self"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/textExtraSmall"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+            <View android:layout_width="1dp"
+                  android:layout_height="match_parent"
+                  android:background="@color/colorWhite"/>
+
+
+            <com.customviews.CustomTextView
+                android:id="@+id/tv_collected_self"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:background="@color/transparent_white"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:padding="@dimen/dp10"
+                android:text="0"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textExtraSmall"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+            <View android:layout_width="1dp"
+                  android:layout_height="match_parent"
+                  android:background="@color/colorWhite"/>
+
+
+            <com.customviews.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:background="@color/colorAccent"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:padding="@dimen/dp10"
+                android:text="@string/present"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/textExtraSmall"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+            <View android:layout_width="1dp"
+                  android:layout_height="match_parent"
+                  android:background="@color/colorWhite"/>
+
+            <com.customviews.CustomTextView
+                android:id="@+id/tv_present"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:background="@color/transparent_white"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:padding="@dimen/dp10"
+                android:text="0"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textExtraSmall"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+
+
+        </LinearLayout>
+
+        <View android:layout_width="match_parent"
+              android:layout_height="@dimen/dp1"
+              android:background="@color/colorWhite"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
+

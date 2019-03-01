@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4b3e3c</color>
+    <color name="colorPrimaryDark">#423735</color>
+    <color name="colorAccent">#F2C374</color>
+    <color name="colorHomeButton">#302F36</color>
+    <color name="colorPink">#FF005C</color>
+
+    <color name="colorPrimaryPix">#4d4390</color>
+    <color name="colorPrimaryLightPix">#4d4390</color>
+
+    <color name="colorBlue">#3902ed</color>
+    <color name="colorGray">#959595</color>
+    <color name="colorPurpleTransparent">#407067af</color>
+    <color name="colorPurpleLight">#7067af</color>
+    <color name="colorPurpleDark">#4d4390</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="color_red">#A51582</color>
+    <color name="transparent_white">#30ffffff</color>
+
+    <color name="semi_black">#80000000</color>
+    <color name="color_black">#000000</color>
+    <color name="color_transparent">#00000000</color>
+    <color name="color_gray_20">#20959595</color>
+    <color name="colorDarkGray">#282b30</color>
+    <color name="colorMidDarkGray">#4a4a4b</color>
+    <color name="colorText">#686a6c</color>
+    <color name="colorGrayLight">#A4A4A4</color>
+    <color name="color_block_text">#101010</color>
+    <color name="color_blue">#3600EA</color>
+    <color name="color_view">#f4d2d0d0</color>
+    <color name="colorPrimary_00">#00000000</color>
+    <color name="color_swatch_normal">#e890dcd1</color>
+    <color name="color_swatch">#2E9485</color>
+    <color name="color_green">#008A12</color>
+    <color name="red">#ed1937</color>
+    <color name="black_transparent">#90000000</color>
+    <color name="black_transparent50">#50000000</color>
+
+    <color name="editTextHintColor">#80c7c6c6</color>
+    <color name="editTextTextColor">#ffffff</color>
+
+
+</resources>

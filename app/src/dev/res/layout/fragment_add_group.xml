@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/splash_bg"
+                android:clickable="true">
+
+    <ScrollView android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:scrollbars="none">
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:orientation="vertical"
+                      android:padding="@dimen/dp10">
+
+
+            <com.customviews.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp10"
+                android:text="@string/group_management"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/textLarge"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="@dimen/dp5"
+                          android:orientation="horizontal"
+                          android:weightSum="1">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/editTextHintColor">
+
+                    <com.customviews.CustomEditText
+                        android:id="@+id/et_group_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/group_name"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:padding="@dimen/dp15"
+                        android:textColor="@color/editTextTextColor"
+                        android:textSize="@dimen/edit_text_text_size"
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:visibility="gone"
+                    android:textColorHint="@color/editTextHintColor"
+                >
+
+                    <com.customviews.CustomEditText
+                        android:id="@+id/et_center_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/center_name"
+                        android:imeOptions="actionNext"
+                        android:drawableRight="@mipmap/drop_icon_gold"
+                        android:paddingRight="@dimen/dp5"
+                        android:focusable="false"
+                        android:editable="false"
+                        android:inputType="text"
+                        android:padding="@dimen/dp15"
+                        android:textColor="@color/editTextTextColor"
+                        android:textSize="@dimen/edit_text_text_size"
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+
+            <com.customviews.CustomTextView
+                android:id="@+id/tv_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp30"
+                android:background="@drawable/bg_btn_pink"
+                android:gravity="center"
+                android:text="@string/submit"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textLarge"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/colorPrimaryDark"
+              android:orientation="vertical"
+              tools:context=".ui.dashboard.recovery.activity.RecoveryGroupsActivity">
+    <include layout="@layout/common_app_header"/>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical"
+                  android:padding="@dimen/dp10">
+
+        <LinearLayout android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="@dimen/dp10"
+                      android:gravity="center_vertical"
+                      android:orientation="horizontal">
+            <com.customviews.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name_column"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/textLarge"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+
+            <com.customviews.CustomTextView
+                android:id="@+id/tv_member_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp5"
+                android:text="@string/name_column"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/textLarge"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_marginTop="@dimen/dp10"
+                      android:orientation="vertical">
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_emis"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+            />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

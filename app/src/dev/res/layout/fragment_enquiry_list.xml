@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhite"
+                android:clickable="true"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_headers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="@dimen/dp45"
+                          android:weightSum="1"
+                          android:background="@color/colorHomeButton"
+                          android:orientation="horizontal">
+
+                <com.customviews.CustomTextView
+                    android:id="@+id/tv_server_enquiries"
+                    android:layout_width="0dp"
+                    android:layout_weight=".5"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:text="@string/server_enquiries"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/textSmall"
+                    app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM  "/>
+
+                <View android:layout_width="0.5dp"
+                      android:layout_height="match_parent"
+                      android:background="@color/colorAccent"/>
+
+                <com.customviews.CustomTextView
+                    android:id="@+id/tv_local_enquiries"
+                    android:layout_width="0dp"
+                    android:textAllCaps="true"
+                    android:layout_weight=".5"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/local_enquiries"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/textSmall"
+                    app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM"/>
+
+
+            </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_server_enquiries"
+        android:layout_below="@+id/ll_headers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    />
+
+  <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_local_enquiries"
+        android:layout_below="@+id/ll_headers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    />
+
+
+    <com.customviews.CustomTextView
+        android:id="@+id/tv_no_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="@dimen/dp10"
+        android:text="@string/no_data_available"
+        android:textColor="@color/colorDarkGray"
+        android:textSize="@dimen/textLargeExtra"
+        android:visibility="gone"
+        app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM"/>
+
+
+</RelativeLayout>

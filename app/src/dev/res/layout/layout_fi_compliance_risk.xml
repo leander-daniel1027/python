@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dp10">
+
+
+    <com.customviews.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:drawableStart="@drawable/star"
+        android:text="@string/common_compliance"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/textLarge"
+        app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@color/transparent_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp15">
+
+
+            <com.customviews.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:lineSpacingExtra="@dimen/dp5"
+                android:text="@string/compliance_a"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textMedium"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+            <CheckBox
+                android:id="@+id/cb_compliance_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@color/transparent_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp15">
+
+
+            <com.customviews.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:lineSpacingExtra="@dimen/dp5"
+                android:text="@string/compliance_b"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textMedium"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+            <CheckBox
+                android:id="@+id/cb_compliance_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@color/transparent_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp15">
+
+
+            <com.customviews.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:lineSpacingExtra="@dimen/dp5"
+                android:text="@string/compliance_c"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textMedium"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+            <CheckBox
+                android:id="@+id/cb_compliance_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <com.customviews.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:drawableStart="@drawable/star"
+            android:text="@string/risk_evaluation"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/textLarge"
+            app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:background="@color/transparent_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp15">
+
+            <com.customviews.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:lineSpacingExtra="@dimen/dp5"
+                android:text="@string/risk_a"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textMedium"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+            <CheckBox
+                android:id="@+id/cb_risk_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@color/transparent_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp15">
+
+            <com.customviews.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:lineSpacingExtra="@dimen/dp5"
+                android:text="@string/risk_b"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textMedium"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+            <CheckBox
+                android:id="@+id/cb_risk_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@color/transparent_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp15">
+
+            <com.customviews.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:lineSpacingExtra="@dimen/dp5"
+                android:text="@string/risk_c"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textMedium"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+            <CheckBox
+                android:id="@+id/cb_risk_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@color/transparent_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp15">
+
+            <com.customviews.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:lineSpacingExtra="@dimen/dp5"
+                android:text="@string/risk_d"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textMedium"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+            <CheckBox
+                android:id="@+id/cb_risk_d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@color/transparent_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp15">
+
+            <com.customviews.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:lineSpacingExtra="@dimen/dp5"
+                android:text="@string/risk_e"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textMedium"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+            <CheckBox
+                android:id="@+id/cb_risk_e"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@color/transparent_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp15">
+
+            <com.customviews.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:lineSpacingExtra="@dimen/dp5"
+                android:text="@string/risk_f"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textMedium"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+            <CheckBox
+                android:id="@+id/cb_risk_f"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@color/transparent_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp15">
+
+            <com.customviews.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:lineSpacingExtra="@dimen/dp5"
+                android:text="@string/risk_g"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textMedium"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+            <CheckBox
+                android:id="@+id/cb_risk_g"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@color/transparent_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp15">
+
+            <com.customviews.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:lineSpacingExtra="@dimen/dp5"
+                android:text="@string/risk_h"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textMedium"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+            <CheckBox
+                android:id="@+id/cb_risk_h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

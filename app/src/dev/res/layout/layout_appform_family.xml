@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:orientation="vertical">
+
+            <com.customviews.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:text="@string/family_profile_income"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/textLarge"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:padding="@dimen/dp15"
+                android:text="@string/total_monthly_income"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/et_total_family_income"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:paddingLeft="@dimen/dp15"
+                android:paddingBottom="@dimen/dp10"
+                android:text="@string/total_monthly_income"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/edit_text_text_size" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+            <!-- <android.support.design.widget.TextInputLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="@dimen/dp10"
+                 android:textColorHint="@color/editTextHintColor">
+
+                 <com.customviews.CustomEditText
+                     android:id="@+id/et_total_family_income"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:hint="@string/total_monthly_income"
+                     android:imeOptions="actionNext"
+                     android:inputType="text"
+                     android:padding="@dimen/dp15"
+                     android:textColor="@color/editTextTextColor"
+                     android:textSize="@dimen/edit_text_text_size"
+                     app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                 />
+             </android.support.design.widget.TextInputLayout>-->
+
+
+            <LinearLayout
+                android:id="@+id/ll_family_income_containor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

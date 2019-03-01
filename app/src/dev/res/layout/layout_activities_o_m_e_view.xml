@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/ll_activity_o_m_e_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp10"
+                android:paddingRight="@dimen/dp10"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dp5"
+                android:paddingBottom="@dimen/dp10"
+                android:paddingTop="@dimen/dp10">
+
+                <ImageView
+                    android:id="@+id/iv_remove_o_m_e_view"
+                    android:layout_width="@dimen/dp30"
+                           android:layout_height="@dimen/dp30"
+                           android:layout_gravity="right"
+                           android:layout_marginRight="@dimen/dp10"
+                           android:src="@mipmap/less_btn"
+                           android:visibility="gone"/>
+
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:layout_marginTop="@dimen/dp5"
+                              android:orientation="horizontal"
+                              android:weightSum="1">
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:layout_weight=".7"
+                        android:layout_marginRight="@dimen/dp5"
+                        android:textColorHint="@color/colorWhite">
+
+                        <com.customviews.CustomEditText
+                            android:id="@+id/et_other_micro_enterprise"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/other_micro_enterprises"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:paddingRight="@dimen/dp5"
+                            android:drawableRight="@mipmap/drop_down_pink"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:padding="@dimen/dp15"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/textMedium"
+                            app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                        />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:layout_weight=".3"
+                        android:textColorHint="@color/colorWhite">
+
+                        <com.customviews.CustomEditText
+                            android:id="@+id/et_other_micro_enterprise_no"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/nos"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:padding="@dimen/dp15"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/textMedium"
+                            app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                        />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_add_o_m_e_view"
+                    android:layout_width="@dimen/dp30"
+                           android:layout_height="@dimen/dp30"
+                           android:layout_gravity="right"
+                           android:layout_marginRight="@dimen/dp10"
+                           android:layout_marginTop="@dimen/dp10"
+                           android:src="@mipmap/add_btn"/>
+            </LinearLayout>
+
+
+
+
+</LinearLayout>

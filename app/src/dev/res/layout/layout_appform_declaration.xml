@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="@dimen/dp10"
+                      android:orientation="horizontal"
+                      android:weightSum="1">
+
+            <LinearLayout android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_weight=".5"
+                          android:orientation="vertical">
+
+
+                <com.customviews.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp10"
+                    android:layout_marginLeft="@dimen/dp5"
+                    android:text="@string/applicant_signature"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/textMedium"
+                    app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_applicant_signature"
+                    android:layout_width="@dimen/dp140"
+                    android:layout_height="@dimen/dp140"
+                    android:background="@drawable/bg_edittext_pink"
+                    android:padding="@dimen/dp15"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/default_image"
+                />
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_weight=".5"
+                          android:gravity="left"
+                          android:orientation="vertical">
+
+                <com.customviews.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp10"
+                    android:layout_marginLeft="@dimen/dp5"
+                    android:text="@string/coapplicant_signature"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/textMedium"
+                    app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_coapplicant_signature"
+                    android:layout_width="@dimen/dp140"
+                    android:layout_height="@dimen/dp140"
+                    android:background="@drawable/bg_edittext_pink"
+                    android:padding="@dimen/dp15"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/default_image"
+                />
+
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="@dimen/dp10"
+                      android:orientation="horizontal"
+                      android:weightSum="1">
+
+            <LinearLayout android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_weight=".5"
+                          android:orientation="vertical">
+
+
+                <com.customviews.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp10"
+                    android:layout_marginLeft="@dimen/dp5"
+                    android:text="Company Personnel:"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/textMedium"
+                    app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_employee_signature"
+                    android:layout_width="@dimen/dp140"
+                    android:layout_height="@dimen/dp140"
+                    android:background="@drawable/bg_edittext_pink"
+                    android:padding="@dimen/dp15"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/default_image"
+                />
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

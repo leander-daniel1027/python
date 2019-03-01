@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/colorPrimaryDark"
+              android:orientation="vertical"
+              tools:context=".ui.dashboard.recovery.activity.RecoveryGroupsActivity">
+    <include layout="@layout/common_app_header"/>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical"
+                  android:padding="@dimen/dp10">
+
+        <com.customviews.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:text="@string/group_listing"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/textLarge"
+            app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_marginTop="@dimen/dp10"
+                      android:background="@drawable/bg_rounded_white_stroke"
+                      android:orientation="vertical">
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:background="@color/colorAccent"
+                          android:layout_margin="@dimen/dp2"
+                          android:gravity="center_vertical"
+                          android:orientation="horizontal"
+                          android:weightSum="1">
+
+
+                <com.customviews.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:lines="2"
+                    android:padding="@dimen/dp10"
+                    android:text="@string/group_name"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/textSmall"
+                    app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM"/>
+                <View android:layout_width="1dp"
+                      android:background="@color/colorWhite"
+                      android:layout_height="match_parent"/>
+                <com.customviews.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:lines="2"
+                    android:padding="@dimen/dp10"
+                    android:text="@string/group_leader_name"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/textSmall"
+                    app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM"/>
+                <View android:layout_width="1dp"
+                      android:background="@color/colorWhite"
+                      android:layout_height="match_parent"/>
+  <com.customviews.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:lines="2"
+                    android:padding="@dimen/dp10"
+                    android:text="@string/leader_number"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/textSmall"
+                    app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM"/>
+                <View android:layout_width="1dp"
+                      android:background="@color/colorWhite"
+                      android:layout_height="match_parent"/>
+       <com.customviews.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:lines="2"
+                    android:padding="@dimen/dp10"
+                    android:text="@string/emi_collection_date"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/textSmall"
+                    app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM"/>
+                <View android:layout_width="1dp"
+                      android:background="@color/colorWhite"
+                      android:layout_height="match_parent"/>
+         <com.customviews.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:lines="2"
+                    android:padding="@dimen/dp10"
+                    android:text="@string/action"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/textSmall"
+                    app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM"/>
+
+
+
+
+            </LinearLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_groups"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+            />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

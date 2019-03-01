@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "224408793952",
+    "firebase_url": "https://deedee-c654d.firebaseio.com",
+    "project_id": "deedee-c654d",
+    "storage_bucket": "deedee-c654d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:224408793952:android:400e27c7967de34f",
+        "android_client_info": {
+          "package_name": "com.solutionavenues.deedee"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "224408793952-2h5ckghm1ehl16ptkvhedsfake1bir77.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTFO_SldNZWXJ09mtrEv7TfMrM0msZUdI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
