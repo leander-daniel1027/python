@@ -1,40 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@mipmap/splash_bg"
-                android:clickable="true">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/splash_bg"
+    android:clickable="true">
 
-    <ScrollView android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fillViewport="true"
-                android:scrollbars="none">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
 
-        <LinearLayout android:layout_width="match_parent"
-                      android:layout_height="match_parent"
-                      android:orientation="vertical"
-                      android:padding="@dimen/dp10">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/dp10">
 
 
             <com.customviews.CustomTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/dp10"
                 android:layout_marginTop="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp10"
                 android:text="@string/cgt"
                 android:textColor="@color/colorAccent"
                 android:textSize="@dimen/textLarge"
-                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+                android:visibility="gone"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="@dimen/dp10"
-                android:paddingTop="@dimen/dp10"
-                android:paddingLeft="@dimen/dp10"
-                android:paddingRight="@dimen/dp10"
                 android:background="@drawable/bg_transparent_layout"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp10"
+                android:paddingTop="@dimen/dp10"
+                android:paddingRight="@dimen/dp10"
+                android:paddingBottom="@dimen/dp10">
 
                 <RadioGroup
                     android:id="@+id/rg_day_type"
@@ -50,7 +55,8 @@
                         android:checked="true"
                         android:paddingLeft="@dimen/dp5"
                         android:text="@string/day1"
-                        android:textColor="@color/colorWhite"/>
+                        android:textColor="@color/colorWhite" />
+
                     <RadioButton
                         android:id="@+id/rb_day2"
                         android:layout_width="wrap_content"
@@ -58,7 +64,7 @@
                         android:layout_marginLeft="@dimen/dp5"
                         android:paddingLeft="@dimen/dp5"
                         android:text="@string/day2"
-                        android:textColor="@color/colorWhite"/>
+                        android:textColor="@color/colorWhite" />
 
 
                 </RadioGroup>
@@ -66,258 +72,24 @@
                 <com.customviews.CustomTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/dp10"
                     android:layout_marginTop="@dimen/dp10"
+                    android:layout_marginBottom="@dimen/dp10"
                     android:text="@string/question"
                     android:textColor="@color/colorWhite"
                     android:textSize="@dimen/textMedium"
-                    app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+                    app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
 
-                <LinearLayout android:layout_width="match_parent"
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_test_questions"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="@dimen/dp10"
-                    android:layout_marginBottom="@dimen/dp5"
-                    android:weightSum="1">
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_weight=".65"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                    android:paddingBottom="@dimen/dp10" />
 
-                        <com.customviews.CustomTextView
-                            android:id="@+id/tv_question1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/colorWhite"
-                            android:textSize="@dimen/edit_text_text_size"
-                            app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
-                            />
-                        <View android:layout_width="match_parent"
-                            android:layout_height="@dimen/dp1"
-                            android:layout_marginTop="@dimen/dp5"
-                            android:background="@color/colorWhite"/>
-
-
-                    </LinearLayout>
-
-
-                    <RadioGroup
-                        android:id="@+id/rg_question1"
-                        android:layout_width="0dp"
-                        android:layout_weight=".35"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <RadioButton
-                            android:id="@+id/rb_question1_yes"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:checked="true"
-                            android:paddingLeft="@dimen/dp5"
-                            android:text="@string/yes"
-                            android:textColor="@color/colorWhite"/>
-                        <RadioButton
-                            android:id="@+id/rb_question1_no"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="@dimen/dp5"
-                            android:paddingLeft="@dimen/dp5"
-                            android:text="@string/no"
-                            android:textColor="@color/colorWhite"/>
-
-
-                    </RadioGroup>
-
-
-
-
-                </LinearLayout>
-                <LinearLayout android:layout_width="match_parent"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="@dimen/dp10"
-                    android:layout_marginBottom="@dimen/dp5"
-                    android:weightSum="1">
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_weight=".65"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <com.customviews.CustomTextView
-                            android:id="@+id/tv_question2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/colorWhite"
-                            android:textSize="@dimen/edit_text_text_size"
-                            app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
-                            />
-                        <View android:layout_width="match_parent"
-                            android:layout_height="@dimen/dp1"
-                            android:layout_marginTop="@dimen/dp5"
-                            android:background="@color/colorWhite"/>
-
-
-                    </LinearLayout>
-
-
-                    <RadioGroup
-                        android:id="@+id/rg_question2"
-                        android:layout_width="0dp"
-                        android:layout_weight=".35"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <RadioButton
-                            android:id="@+id/rb_question2_yes"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:checked="true"
-                            android:paddingLeft="@dimen/dp5"
-                            android:text="@string/yes"
-                            android:textColor="@color/colorWhite"/>
-                        <RadioButton
-                            android:id="@+id/rb_question2_no"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="@dimen/dp5"
-                            android:paddingLeft="@dimen/dp5"
-                            android:text="@string/no"
-                            android:textColor="@color/colorWhite"/>
-
-
-                    </RadioGroup>
-
-
-
-
-                </LinearLayout>
-                <LinearLayout android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="@dimen/dp10"
-                    android:layout_marginBottom="@dimen/dp5"
-                    android:weightSum="1">
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_weight=".65"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <com.customviews.CustomTextView
-                            android:id="@+id/tv_question3"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/colorWhite"
-                            android:textSize="@dimen/edit_text_text_size"
-                            app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
-                            />
-                        <View android:layout_width="match_parent"
-                            android:layout_height="@dimen/dp1"
-                            android:layout_marginTop="@dimen/dp5"
-                            android:background="@color/colorWhite"/>
-
-
-                    </LinearLayout>
-
-
-                    <RadioGroup
-                        android:id="@+id/rg_question3"
-                        android:layout_width="0dp"
-                        android:layout_weight=".35"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <RadioButton
-                            android:id="@+id/rb_question3_yes"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:checked="true"
-                            android:paddingLeft="@dimen/dp5"
-                            android:text="@string/yes"
-                            android:textColor="@color/colorWhite"/>
-                        <RadioButton
-                            android:id="@+id/rb_question3_no"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="@dimen/dp5"
-                            android:paddingLeft="@dimen/dp5"
-                            android:text="@string/no"
-                            android:textColor="@color/colorWhite"/>
-
-
-                    </RadioGroup>
-
-
-
-
-                </LinearLayout>
-                <LinearLayout android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="@dimen/dp10"
-                    android:layout_marginBottom="@dimen/dp5"
-                    android:weightSum="1">
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_weight=".65"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <com.customviews.CustomTextView
-                            android:id="@+id/tv_question4"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/colorWhite"
-                            android:textSize="@dimen/edit_text_text_size"
-                            app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
-                            />
-                        <View android:layout_width="match_parent"
-                            android:layout_height="@dimen/dp1"
-                            android:layout_marginTop="@dimen/dp5"
-                            android:background="@color/colorWhite"/>
-
-
-                    </LinearLayout>
-
-
-                    <RadioGroup
-                        android:id="@+id/rg_question4"
-                        android:layout_width="0dp"
-                        android:layout_weight=".35"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <RadioButton
-                            android:id="@+id/rb_question4_yes"                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:checked="true"
-                            android:paddingLeft="@dimen/dp5"
-                            android:text="@string/yes"
-                            android:textColor="@color/colorWhite"/>
-                        <RadioButton
-                            android:id="@+id/rb_question4_no"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="@dimen/dp5"
-                            android:paddingLeft="@dimen/dp5"
-                            android:text="@string/no"
-                            android:textColor="@color/colorWhite"/>
-
-
-                    </RadioGroup>
-
-                </LinearLayout>
-
-                <LinearLayout android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
                     android:layout_marginTop="@dimen/dp20"
+                    android:gravity="center_horizontal"
                     android:orientation="vertical">
 
 
@@ -327,7 +99,7 @@
                         android:text="@string/group_photo"
                         android:textColor="@color/colorWhite"
                         android:textSize="@dimen/textMedium"
-                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
 
 
                     <de.hdodenhof.circleimageview.CircleImageView
@@ -338,8 +110,7 @@
                         android:background="@drawable/bg_edittext_pink"
                         android:padding="@dimen/dp15"
                         android:scaleType="centerCrop"
-                        android:src="@mipmap/default_image"
-                        />
+                        android:src="@mipmap/default_image" />
 
 
                 </LinearLayout>
@@ -347,23 +118,19 @@
             </LinearLayout>
 
 
-
-
             <com.customviews.CustomTextView
                 android:id="@+id/tv_submit"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/btn_height"
                 android:layout_gravity="center"
-                android:layout_marginBottom="@dimen/dp20"
                 android:layout_marginTop="@dimen/dp30"
+                android:layout_marginBottom="@dimen/dp20"
                 android:background="@drawable/bg_btn_gold"
                 android:gravity="center"
                 android:text="@string/submit"
                 android:textColor="@color/color_black"
                 android:textSize="@dimen/textLarge"
-                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
-
-
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
 
 
         </LinearLayout>

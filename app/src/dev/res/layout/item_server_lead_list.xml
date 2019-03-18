@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
@@ -11,9 +11,11 @@
         android:layout_margin="@dimen/dp5"
         app:cardCornerRadius="@dimen/dp3"
         app:cardElevation="@dimen/dp5">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <LinearLayout
                 android:id="@+id/ll_parent_server"
                 android:layout_width="match_parent"
@@ -34,7 +36,7 @@
                         android:text="@string/name_column"
                         android:textColor="@color/colorPrimary"
                         android:textSize="@dimen/textSmall"
-                        app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM"/>
+                        app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM" />
 
                     <com.customviews.CustomTextView
                         android:id="@+id/tv_name"
@@ -44,11 +46,12 @@
                         android:ellipsize="end"
                         android:textColor="@color/colorGray"
                         android:textSize="@dimen/textSmall"
-                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
 
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/ll_fathers_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp5"
@@ -61,7 +64,7 @@
                         android:text="@string/father_name_column"
                         android:textColor="@color/colorPrimary"
                         android:textSize="@dimen/textSmall"
-                        app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM"/>
+                        app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM" />
 
                     <com.customviews.CustomTextView
                         android:id="@+id/tv_father_name"
@@ -71,11 +74,12 @@
                         android:ellipsize="end"
                         android:textColor="@color/colorGray"
                         android:textSize="@dimen/textSmall"
-                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
 
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/ll_loan_amount"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp5"
@@ -88,7 +92,7 @@
                         android:text="@string/loan_amount_column"
                         android:textColor="@color/colorPrimary"
                         android:textSize="@dimen/textSmall"
-                        app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM"/>
+                        app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM" />
 
                     <com.customviews.CustomTextView
                         android:id="@+id/tv_loan_amount"
@@ -98,11 +102,12 @@
                         android:ellipsize="end"
                         android:textColor="@color/colorGray"
                         android:textSize="@dimen/textSmall"
-                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
 
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/ll_currnt_address"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp5"
@@ -115,7 +120,7 @@
                         android:text="@string/current_address_column"
                         android:textColor="@color/colorPrimary"
                         android:textSize="@dimen/textSmall"
-                        app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM"/>
+                        app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM" />
 
                     <com.customviews.CustomTextView
                         android:id="@+id/tv_current_address"
@@ -125,10 +130,40 @@
                         android:ellipsize="end"
                         android:textColor="@color/colorGray"
                         android:textSize="@dimen/textSmall"
-                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
 
                 </LinearLayout>
+
                 <LinearLayout
+                    android:id="@+id/ll_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp2">
+
+                    <com.customviews.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/area_"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/textSmall"
+                        app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM" />
+
+                    <com.customviews.CustomTextView
+                        android:id="@+id/tv_area"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:ellipsize="end"
+                        android:textColor="@color/colorGray"
+                        android:textSize="@dimen/textSmall"
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_lat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp5"
@@ -141,7 +176,7 @@
                         android:text="@string/latitude"
                         android:textColor="@color/colorPrimary"
                         android:textSize="@dimen/textSmall"
-                        app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM"/>
+                        app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM" />
 
                     <com.customviews.CustomTextView
                         android:id="@+id/tv_latitude"
@@ -151,10 +186,12 @@
                         android:ellipsize="end"
                         android:textColor="@color/colorGray"
                         android:textSize="@dimen/textSmall"
-                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
 
                 </LinearLayout>
+
                 <LinearLayout
+                    android:id="@+id/ll_lng"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp5"
@@ -167,7 +204,7 @@
                         android:text="@string/longitude"
                         android:textColor="@color/colorPrimary"
                         android:textSize="@dimen/textSmall"
-                        app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM"/>
+                        app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM" />
 
                     <com.customviews.CustomTextView
                         android:id="@+id/tv_longitude"
@@ -177,10 +214,12 @@
                         android:ellipsize="end"
                         android:textColor="@color/colorGray"
                         android:textSize="@dimen/textSmall"
-                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
 
                 </LinearLayout>
+
                 <LinearLayout
+                    android:id="@+id/ll_dob"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp5"
@@ -193,7 +232,7 @@
                         android:text="@string/dob_column"
                         android:textColor="@color/colorPrimary"
                         android:textSize="@dimen/textSmall"
-                        app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM"/>
+                        app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM" />
 
                     <com.customviews.CustomTextView
                         android:id="@+id/tv_dob"
@@ -203,11 +242,12 @@
                         android:ellipsize="end"
                         android:textColor="@color/colorGray"
                         android:textSize="@dimen/textSmall"
-                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
 
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/ll_mobile1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp5"
@@ -220,7 +260,7 @@
                         android:text="@string/mobile1_column"
                         android:textColor="@color/colorPrimary"
                         android:textSize="@dimen/textSmall"
-                        app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM"/>
+                        app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM" />
 
                     <com.customviews.CustomTextView
                         android:id="@+id/tv_mobile1"
@@ -230,11 +270,12 @@
                         android:ellipsize="end"
                         android:textColor="@color/colorGray"
                         android:textSize="@dimen/textSmall"
-                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
 
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/ll_mobile2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp5"
@@ -247,7 +288,7 @@
                         android:text="@string/mobile2_column"
                         android:textColor="@color/colorPrimary"
                         android:textSize="@dimen/textSmall"
-                        app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM"/>
+                        app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM" />
 
                     <com.customviews.CustomTextView
                         android:id="@+id/tv_mobile2"
@@ -257,16 +298,17 @@
                         android:ellipsize="end"
                         android:textColor="@color/colorGray"
                         android:textSize="@dimen/textSmall"
-                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
 
                 </LinearLayout>
 
 
-                <LinearLayout android:layout_width="match_parent"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="right"
-                    android:layout_marginBottom="@dimen/dp10"
                     android:layout_marginTop="@dimen/dp10"
+                    android:layout_marginBottom="@dimen/dp10"
+                    android:gravity="right"
                     android:orientation="horizontal">
 
                     <com.customviews.CustomTextView
@@ -280,35 +322,36 @@
                         android:text="@string/telecalling"
                         android:textColor="@color/colorWhite"
                         android:textSize="@dimen/textMedium"
-                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
 
                     <com.customviews.CustomTextView
                         android:id="@+id/tv_fi"
                         android:layout_width="wrap_content"
                         android:layout_height="@dimen/dp30"
+                        android:layout_marginLeft="@dimen/dp5"
                         android:background="@drawable/bg_btn_pink"
                         android:gravity="center"
-                        android:layout_marginLeft="@dimen/dp5"
                         android:paddingLeft="@dimen/dp15"
                         android:paddingRight="@dimen/dp15"
                         android:text="@string/fi"
                         android:textColor="@color/colorWhite"
                         android:textSize="@dimen/textMedium"
-                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
 
                 </LinearLayout>
 
 
             </LinearLayout>
+
             <ImageView
+                android:id="@+id/navi_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/navi"
-                android:id="@+id/navi_icon"
-                android:padding="5dp"
-                android:visibility="gone"
+                android:layout_alignParentRight="true"
                 android:layout_margin="@dimen/dp10"
-                android:layout_alignParentRight="true"/>
+                android:padding="5dp"
+                android:src="@mipmap/navi"
+                android:visibility="gone" />
         </RelativeLayout>
 
 

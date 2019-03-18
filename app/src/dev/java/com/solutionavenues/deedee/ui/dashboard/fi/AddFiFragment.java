@@ -92,7 +92,7 @@ public class AddFiFragment extends AppBaseFragment implements ApiHitListener, On
 
     /*Feedback Views*/
     private EditText et_member_name, et_bill_name, et_relationship, et_feedback, et_address, et_member_name2,
-            et_feedback2, et_address2, et_comment, et_field_officer_name;
+            et_feedback2, et_address2, et_comment, et_field_officer_name, et_status;
     private RadioGroup rg_remark, rg_cheque, rg_remark2;
     private CheckBox cb_declaration;
     private ImageView iv_applicant_signature, iv_group_photo, iv_officer_signature;
@@ -105,6 +105,26 @@ public class AddFiFragment extends AppBaseFragment implements ApiHitListener, On
     ArrayList<String> yearList;
     public AddFiRequestModel fiDataForEdit;
     private Dialog loadViewDialog;
+    private int status = 1;
+
+
+    DialogInterface.OnClickListener onClickedStatusDialogListner = new DialogInterface.OnClickListener() {
+        public void onClick(DialogInterface dialog, int item) {
+            status = item;
+            et_status.setText(getResources().getStringArray(R.array.status_arr)[item]);
+        }
+    };
+    View.OnClickListener onStatusClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Utils.hideKeyboard(getActivity());
+            Utils.showAlertDialog(getActivity(),
+                    "",
+                    getResources().getStringArray(R.array.status_arr),
+                    onClickedStatusDialogListner);
+        }
+    };
+
 
     public void setLoadViewDialog(Dialog loadViewDialog) {
         this.loadViewDialog = loadViewDialog;
@@ -188,15 +208,14 @@ public class AddFiFragment extends AppBaseFragment implements ApiHitListener, On
         setComplianceData(fiDataForEdit);
         setRiskData(fiDataForEdit);
         setFeedbackData(fiDataForEdit);
-
     }
 
     private void setLeadDataToFi() {
         if (addLeadRequestModel != null) {
             et_name_of_applicant.setText(addLeadRequestModel.getLoanPersonelInfo().getName());
-            et_k_number.setText(addLeadRequestModel.getLoanPersonelInfo().getK_number());
+//            et_k_number.setText(addLeadRequestModel.getLoanPersonelInfo().getK_number());
             et_mobile.setText(addLeadRequestModel.getAddressInfo().getMobile_contact());
-            et_residential_address.setText(addLeadRequestModel.getAddressInfo().getAddress());
+//            et_residential_address.setText(addLeadRequestModel.getAddressInfo().getAddress());
             et_loan_applied_at_e.setText(addLeadRequestModel.getLoanPersonelInfo().getLoan_amount());
         }
     }
@@ -276,6 +295,8 @@ public class AddFiFragment extends AppBaseFragment implements ApiHitListener, On
         et_native_living_since = getView().findViewById(R.id.et_native_living_since);
         et_native_phone1 = getView().findViewById(R.id.et_native_phone1);
         et_native_phone2 = getView().findViewById(R.id.et_native_phone2);
+        et_status = getView().findViewById(R.id.et_status);
+        et_status.setOnClickListener(onStatusClickListener);
         et_living_since.setOnClickListener(this);
         et_native_living_since.setOnClickListener(this);
         et_applicant_income_amount.addTextChangedListener(this);
@@ -332,6 +353,7 @@ public class AddFiFragment extends AppBaseFragment implements ApiHitListener, On
         et_field_officer_name = getView().findViewById(R.id.et_field_officer_name);
 
         iv_applicant_signature.setOnClickListener(this);
+
         iv_group_photo.setOnClickListener(this);
         iv_officer_signature.setOnClickListener(this);
     }
@@ -414,6 +436,8 @@ public class AddFiFragment extends AppBaseFragment implements ApiHitListener, On
         } else if (!RegexValidations.hasText(et_coapplicant_source, getActivity(), getString(R.string.please_enter_coapplicant_source_of_income))) {
             status = false;
         } else if (!RegexValidations.hasText(et_coapplicant_income_amount, getActivity(), getString(R.string.please_enter_coapplicant_source_of_income))) {
+            status = false;
+        } else if (!RegexValidations.hasText(et_status, getActivity(), getString(R.string.please_enter_applicant_status))) {
             status = false;
         }
         if (!status) {
@@ -688,6 +712,7 @@ public class AddFiFragment extends AppBaseFragment implements ApiHitListener, On
 
     private void setPersonalData(AddFiRequestModel fiRequestModel) {
         et_name_of_applicant.setText(fiRequestModel.getName_of_applicant());
+        et_status.setText(fiRequestModel.getStatus());
         et_k_number.setText(fiRequestModel.getK_number());
         et_father_name.setText(fiRequestModel.getName_of_father());
         et_spouse_name.setText(fiRequestModel.getName_of_husband());
@@ -874,6 +899,7 @@ public class AddFiFragment extends AppBaseFragment implements ApiHitListener, On
         personalBean.setUser_id(user_id);
         personalBean.setDate(getCurrentDate());
         personalBean.setName_of_applicant(et_name_of_applicant.getText().toString());
+        personalBean.setStatus(String.valueOf(status));
         personalBean.setK_number(et_k_number.getText().toString());
         personalBean.setCustomer_type(getRadioButtonValue(rg_customer_type));
         personalBean.setName_of_father(et_father_name.getText().toString());

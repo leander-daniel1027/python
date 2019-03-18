@@ -29,7 +29,7 @@ import java.util.ArrayList;
  */
 public class AddCenterFragment extends AppBaseFragment implements ApiHitListener {
     private TextView tv_submit;
-    private EditText et_center_name, et_center_owner_name, et_center_owner_contant, et_branch_name;
+    private EditText et_center_name, et_center_owner_name, et_center_owner_contant, et_branch_name, et_lat, et_lng;
     private ArrayList<BranchListResponseModel.DataBean> branchList = new ArrayList<>();
     private ArrayList<String> branchTitleList = new ArrayList<>();
     private String location_address = "";
@@ -50,12 +50,16 @@ public class AddCenterFragment extends AppBaseFragment implements ApiHitListener
 
     private void findViews() {
         et_center_name = getView().findViewById(R.id.et_center_name);
+        et_lat = getView().findViewById(R.id.et_lat);
+        et_lng = getView().findViewById(R.id.et_lng);
         et_center_owner_name = getView().findViewById(R.id.et_center_owner_name);
         et_center_owner_contant = getView().findViewById(R.id.et_center_owner_contant);
         et_branch_name = getView().findViewById(R.id.et_branch_name);
         tv_submit = getView().findViewById(R.id.tv_submit);
         tv_submit.setOnClickListener(this);
         et_branch_name.setOnClickListener(this);
+        et_lng.setText(getMyApplication().getAppPrefs().getCurrentLatitude());
+        et_lat.setText(getMyApplication().getAppPrefs().getCurrentLongitude());
     }
 
     @Override

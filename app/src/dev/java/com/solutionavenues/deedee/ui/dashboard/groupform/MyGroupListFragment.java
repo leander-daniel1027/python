@@ -71,9 +71,9 @@ public class MyGroupListFragment extends AppBaseFragment
     }
 
     private void setAdapter() {
-        listAdapter = new GroupListAdapter(getActivity(), groupList, this);
+        int roleType = getMyApplication().getUserPrefs().getLoggedInUser().getRole_id();
+        listAdapter = new GroupListAdapter(getActivity(), groupList, this, roleType);
         rv_groups.setAdapter(listAdapter);
-
     }
 
 
@@ -133,7 +133,8 @@ public class MyGroupListFragment extends AppBaseFragment
                 displayProgressBar(false, getActivity());
             }
             String user_id = String.valueOf(getMyApplication().getUserPrefs().getLoggedInUser().getId());
-            getRestClient().callback(this).getMyGroups(user_id);
+            String role_id = String.valueOf(getMyApplication().getUserPrefs().getLoggedInUser().getRole_id());
+            getRestClient().callback(this).getMyGroups(user_id,role_id);
         } else {
             displayErrorDialog(getString(R.string.error_internet_connection));
         }

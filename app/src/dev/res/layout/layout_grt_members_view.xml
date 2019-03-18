@@ -12,20 +12,32 @@
         android:layout_marginTop="@dimen/dp5"
         android:background="@drawable/bg_transparent_layout"
         android:orientation="vertical"
-        android:paddingBottom="@dimen/dp10"
         android:paddingLeft="@dimen/dp10"
+        android:paddingTop="@dimen/dp10"
         android:paddingRight="@dimen/dp10"
-        android:paddingTop="@dimen/dp10">
+        android:paddingBottom="@dimen/dp10">
 
         <ImageView
             android:id="@+id/iv_remove_view"
             android:layout_width="@dimen/dp50"
             android:layout_height="@dimen/dp50"
-            android:padding="@dimen/dp8"
             android:layout_gravity="right"
             android:layout_marginRight="@dimen/dp10"
+            android:padding="@dimen/dp8"
             android:src="@mipmap/less_btn"
             android:visibility="gone" />
+
+        <CheckBox
+            android:id="@+id/ischeck_cb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp5"
+            android:layoutDirection="rtl"
+            android:text="@string/is_check"
+            android:textColor="@color/editTextTextColor"
+            android:textColorHint="@color/editTextHintColor"
+            android:textSize="@dimen/edit_text_text_size" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -53,7 +65,6 @@
                     android:textSize="@dimen/edit_text_text_size"
                     app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
             </android.support.design.widget.TextInputLayout>
-
 
 
             <android.support.design.widget.TextInputLayout
@@ -127,12 +138,14 @@
 
         </LinearLayout>
 
-        <LinearLayout android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:gravity="center"
-                      android:paddingBottom="@dimen/dp10"
-                      android:paddingTop="@dimen/dp10"
-                      android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/dp10"
+            android:paddingBottom="@dimen/dp10">
 
 
             <com.customviews.CustomTextView
@@ -141,7 +154,7 @@
                 android:text="@string/c_l_signature"
                 android:textColor="@color/colorWhite"
                 android:textSize="@dimen/textMedium"
-                app:custom_font="@string/GOTHAM_ROUNDED_BOOK"/>
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
 
 
             <de.hdodenhof.circleimageview.CircleImageView
@@ -152,8 +165,7 @@
                 android:background="@drawable/bg_edittext_pink"
                 android:padding="@dimen/dp10"
                 android:scaleType="centerCrop"
-                android:src="@mipmap/default_image"
-            />
+                android:src="@mipmap/default_image" />
 
 
         </LinearLayout>
@@ -162,10 +174,10 @@
             android:id="@+id/iv_add_view"
             android:layout_width="@dimen/dp50"
             android:layout_height="@dimen/dp50"
-            android:padding="@dimen/dp8"
             android:layout_gravity="right"
-            android:layout_marginRight="@dimen/dp10"
             android:layout_marginTop="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp10"
+            android:padding="@dimen/dp8"
             android:src="@mipmap/add_btn" />
     </LinearLayout>
 

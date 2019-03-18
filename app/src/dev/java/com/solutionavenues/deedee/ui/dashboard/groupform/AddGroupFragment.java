@@ -23,7 +23,7 @@ import java.util.ArrayList;
  */
 public class AddGroupFragment extends AppBaseFragment implements ApiHitListener {
     private TextView tv_submit;
-    private EditText et_group_name, et_center_name;
+    private EditText et_group_name, et_center_name, et_lat, et_lng;
     private ArrayList<CenterListResponseModel.DataBean> centerList = new ArrayList<>();
     private ArrayList<String> centerTitleList = new ArrayList<>();
     private int centerId;
@@ -36,15 +36,19 @@ public class AddGroupFragment extends AppBaseFragment implements ApiHitListener 
     @Override
     public void initializeComponent() {
         findViews();
-       // getCenterList();
+        // getCenterList();
     }
 
     private void findViews() {
         et_group_name = getView().findViewById(R.id.et_group_name);
         et_center_name = getView().findViewById(R.id.et_center_name);
+        et_lat = getView().findViewById(R.id.et_lat);
+        et_lng = getView().findViewById(R.id.et_lng);
         tv_submit = getView().findViewById(R.id.tv_submit);
         tv_submit.setOnClickListener(this);
         et_center_name.setOnClickListener(this);
+        et_lng.setText(getMyApplication().getAppPrefs().getCurrentLatitude());
+        et_lat.setText(getMyApplication().getAppPrefs().getCurrentLongitude());
     }
 
     @Override
@@ -90,8 +94,8 @@ public class AddGroupFragment extends AppBaseFragment implements ApiHitListener 
 
     DialogInterface.OnClickListener onClickedCenterListner = new DialogInterface.OnClickListener() {
         public void onClick(DialogInterface dialog, int item) {
-            if (centerList != null && centerList.size()>0) {
-                centerId=centerList.get(item).getId();
+            if (centerList != null && centerList.size() > 0) {
+                centerId = centerList.get(item).getId();
             }
             et_center_name.setText("" + centerTitleList.toArray(new String[centerTitleList.size()])[item]);
         }

@@ -1146,6 +1146,8 @@ public class ApplicationFormFragment extends AppBaseFragment implements
             } else if (currentVisibleLayoutPosition != tabArr.length - 1 && currentVisibleLayoutPosition == 7) {
                 if (img_housephoto.getTag() == null) {
                     showToast(getString(R.string.please_enter_household_photo));
+                } else if (!documentNumAvial()) {
+                    showToast(getString(R.string.please_enter_Document_number));
                 } else {
                     if (currentVisibleLayoutPosition != tabArr.length - 1) {
                         hsv_form_header.scrollBy(120, 0);
@@ -1186,8 +1188,11 @@ public class ApplicationFormFragment extends AppBaseFragment implements
             } else if (currentVisibleLayoutPosition != tabArr.length - 1 && currentVisibleLayoutPosition == 7) {
                 if (img_housephoto.getTag() == null) {
                     showToast(getString(R.string.please_enter_household_photo));
-                } else
+                } else if (!documentNumAvial()) {
+                    showToast(getString(R.string.please_enter_Document_number));
+                } else {
                     setTabVisibility(visibleTv, visibleLl);
+                }
             } else {
 //                if (currentVisibleLayoutPosition != tabArr.length - 1) {
                 setTabVisibility(visibleTv, visibleLl);
@@ -1461,7 +1466,7 @@ public class ApplicationFormFragment extends AppBaseFragment implements
     // call to submitAppForm service
     private void submitAppForm() {
         if (ConnectionDetector.isNetAvail(getActivity())) {
-            displayProgressBar(false, getActivity());
+            displayProgressBar(false, getActivity()); //todo set not cancellable
             addLeadRequestModel.getHouseHoldInfo().setHousehold_surplus(setZeroInt(addLeadRequestModel.getHouseHoldInfo().getHousehold_surplus()));
             addLeadRequestModel.getHouseHoldInfo().setHousehold_eduction(setZeroInt(addLeadRequestModel.getHouseHoldInfo().getHousehold_eduction()));
             addLeadRequestModel.getHouseHoldInfo().setHousehold_food_n_fule(setZeroInt(addLeadRequestModel.getHouseHoldInfo().getHousehold_food_n_fule()));
@@ -1479,13 +1484,12 @@ public class ApplicationFormFragment extends AppBaseFragment implements
             addLeadRequestModel.getSavingsInfo().setAverage_other(setZeroInt(addLeadRequestModel.getSavingsInfo().getAverage_other()));
             addLeadRequestModel.getSavingsInfo().setAverage_post_office(setZeroInt(addLeadRequestModel.getSavingsInfo().getAverage_post_office()));
             addLeadRequestModel.getSavingsInfo().setAverage_surplus(setZeroInt(addLeadRequestModel.getSavingsInfo().getAverage_surplus()));
-            for (int i = 0; i <= addLeadRequestModel.getExistingLoanInfoList().size(); i++) {
+            for (int i = 0; i < addLeadRequestModel.getExistingLoanInfoList().size(); i++) {
                 addLeadRequestModel.getExistingLoanInfoList().get(i).setEmi_amount(setZeroInt(addLeadRequestModel.getExistingLoanInfoList().get(i).getEmi_amount()));
                 addLeadRequestModel.getExistingLoanInfoList().get(i).setLoan_amount(setZeroInt(addLeadRequestModel.getExistingLoanInfoList().get(i).getLoan_amount()));
             }
-            for (int i = 0; i <= addLeadRequestModel.getFamilyProfile().getFamilyProfileInfoList().size(); i++) {
+            for (int i = 0; i < addLeadRequestModel.getFamilyProfile().getFamilyProfileInfoList().size(); i++) {
                 addLeadRequestModel.getFamilyProfile().getFamilyProfileInfoList().get(i).setMonthly_income(setZeroInt(addLeadRequestModel.getFamilyProfile().getFamilyProfileInfoList().get(i).getMonthly_income()));
-
             }
 
             getRestClient().callback(this).submitAppForm(addLeadRequestModel);
@@ -1999,6 +2003,15 @@ public class ApplicationFormFragment extends AppBaseFragment implements
         et_coapplicant_branch.setText(leadRequestModel.getChequeInfo().get(1).getBranch_name());
         et_coapplicant_cheque_no.setText(leadRequestModel.getChequeInfo().get(1).getCheque_number());
 
+    }
+
+    private boolean documentNumAvial() {
+        for (int i = 0; i < documentItemLayout.getChildCount(); i++) {
+            View view = documentItemLayout.getChildAt(i);
+            EditText documentNum = view.findViewById(R.id.documentNumber);
+            return !TextUtils.isEmpty(documentNum.getText().toString().trim());
+        }
+        return false;
     }
 
     private ArrayList<AddLeadRequestModel.KycInfo> getKycData() {
@@ -3002,7 +3015,9 @@ public class ApplicationFormFragment extends AppBaseFragment implements
             UploadImageResponseModel responseModel = (UploadImageResponseModel) response;
             if (responseModel != null) {
                 if (!responseModel.isError()) {
-                    allLeadImages.remove(0);
+                    if (allLeadImages.size() > 0) {
+                        allLeadImages.remove(0);
+                    }
                     if (allLeadImages.size() > 0) {
                         uploadImage(allLeadImages.get(0), false);
                     } else {

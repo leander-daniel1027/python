@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dp10"
+    android:id="@+id/hs_item_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_enquiry"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/module_height"
+        android:layout_weight=".5"
+        android:background="@drawable/bg_btn_module">
+
+        <View
+            android:layout_width="@dimen/dp10"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@color/colorAccent" />
+
+        <com.customviews.CustomTextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp30"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@string/enquiry"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/textLarge"
+            app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/grid_right_decor" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

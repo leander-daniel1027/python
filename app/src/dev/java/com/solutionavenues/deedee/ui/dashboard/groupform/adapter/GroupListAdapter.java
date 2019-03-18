@@ -22,13 +22,15 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
     Activity mActivity;
     public ArrayList<GroupListResponseModel.DataBean> groupList;
     View.OnClickListener onClickListener;
+    int roleType;
 
 
     public GroupListAdapter(FragmentActivity activity, ArrayList<GroupListResponseModel.DataBean> groupList,
-                            View.OnClickListener onClickListener) {
+                            View.OnClickListener onClickListener, int roleType) {
         mActivity = activity;
         this.groupList = groupList;
         this.onClickListener = onClickListener;
+        this.roleType = roleType;
     }
 
     @Override
@@ -59,6 +61,20 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
         holder.tv_cgt.setOnClickListener(onClickListener);
         holder.tv_grt.setTag(position);
         holder.tv_grt.setOnClickListener(onClickListener);
+
+        switch (roleType){
+            case 18:
+                holder.tv_cgt.setVisibility(View.GONE);
+                holder.tv_grt.setVisibility(View.GONE);
+                break;
+            case 19:
+                holder.tv_cgt.setVisibility(View.GONE);
+                break;
+            case 31:
+                holder.tv_grt.setVisibility(View.GONE);
+                break;
+
+        }
 
     }
 

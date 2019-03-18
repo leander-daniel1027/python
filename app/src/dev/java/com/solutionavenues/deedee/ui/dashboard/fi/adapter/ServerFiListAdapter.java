@@ -15,7 +15,6 @@ import com.solutionavenues.deedee.model.request.AddFiRequestModel;
 import java.util.ArrayList;
 
 
-
 public class ServerFiListAdapter extends RecyclerView.Adapter<ServerFiListAdapter.Viewholder> {
 
     Activity mActivity;
@@ -26,8 +25,8 @@ public class ServerFiListAdapter extends RecyclerView.Adapter<ServerFiListAdapte
     public ServerFiListAdapter(FragmentActivity activity, ArrayList<AddFiRequestModel> enquiryList,
                                View.OnClickListener onClickListener) {
         mActivity = activity;
-        this.serverFiList =enquiryList;
-        this.onClickListener=onClickListener;
+        this.serverFiList = enquiryList;
+        this.onClickListener = onClickListener;
     }
 
     @Override
@@ -41,6 +40,7 @@ public class ServerFiListAdapter extends RecyclerView.Adapter<ServerFiListAdapte
         AddFiRequestModel dataBean = serverFiList.get(position);
         holder.tv_applicant_name.setText(dataBean.getName_of_applicant());
         holder.tv_father_name.setText(dataBean.getName_of_father());
+        holder.tv_husbanc_name.setText(dataBean.getName_of_husband());
         holder.tv_loan_amount.setText(dataBean.getLoan_amount());
         holder.tv_native_address.setText(dataBean.getNative_address());
         holder.tv_mobile1.setText(dataBean.getMobile());
@@ -67,10 +67,8 @@ public class ServerFiListAdapter extends RecyclerView.Adapter<ServerFiListAdapte
     }
 
     public class Viewholder extends RecyclerView.ViewHolder {
-        TextView tv_applicant_name,tv_father_name,tv_loan_amount,tv_native_address
-                ,tv_mobile2,tv_mobile1;
+        TextView tv_applicant_name, tv_father_name, tv_husbanc_name, tv_loan_amount, tv_native_address, tv_mobile2, tv_mobile1;
         LinearLayout ll_parent_server;
-
 
 
         public Viewholder(View itemView) {
@@ -78,6 +76,7 @@ public class ServerFiListAdapter extends RecyclerView.Adapter<ServerFiListAdapte
             ll_parent_server = itemView.findViewById(R.id.ll_parent_server);
             tv_applicant_name = itemView.findViewById(R.id.tv_applicant_name);
             tv_father_name = itemView.findViewById(R.id.tv_father_name);
+            tv_husbanc_name = itemView.findViewById(R.id.tv_husbanc_name);
             tv_loan_amount = itemView.findViewById(R.id.tv_loan_amount);
             tv_native_address = itemView.findViewById(R.id.tv_native_address);
             tv_mobile2 = itemView.findViewById(R.id.tv_mobile2);

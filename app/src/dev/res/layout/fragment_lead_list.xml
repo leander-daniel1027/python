@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/colorWhite"
-                android:clickable="true"
-                android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:clickable="true"
+    android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/ll_headers"
@@ -14,11 +14,12 @@
         android:orientation="vertical">
 
 
-        <LinearLayout android:layout_width="match_parent"
-                      android:layout_height="@dimen/dp45"
-                      android:background="@color/colorHomeButton"
-                      android:orientation="horizontal"
-                      android:weightSum="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp45"
+            android:background="@color/colorHomeButton"
+            android:orientation="horizontal"
+            android:weightSum="1">
 
             <com.customviews.CustomTextView
                 android:id="@+id/tv_server_leads"
@@ -30,11 +31,12 @@
                 android:textAllCaps="true"
                 android:textColor="@color/colorWhite"
                 android:textSize="@dimen/textSmall"
-                app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM  "/>
+                app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM  " />
 
-            <View android:layout_width="0.5dp"
-                  android:layout_height="match_parent"
-                  android:background="@color/colorAccent"/>
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent" />
 
             <com.customviews.CustomTextView
                 android:id="@+id/tv_local_leads"
@@ -46,11 +48,78 @@
                 android:textAllCaps="true"
                 android:textColor="@color/colorWhite"
                 android:textSize="@dimen/textSmall"
-                app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM"/>
+                app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM" />
 
 
         </LinearLayout>
 
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btn_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_headers"
+        android:layout_alignParentRight="true"
+        android:background="?attr/selectableItemBackground"
+        android:padding="@dimen/dp5"
+        android:text="@string/reset_filter" />
+
+    <LinearLayout
+        android:id="@+id/ll_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_reset"
+        android:orientation="horizontal">
+
+        <com.customviews.CustomEditText
+            android:id="@+id/et_lead_area"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_headers"
+            android:layout_weight="1"
+            android:drawableRight="@mipmap/drop_icon_gold"
+            android:editable="false"
+            android:ellipsize="end"
+            android:focusable="false"
+            android:hint="@string/area"
+            android:inputType="text"
+            android:padding="16dp"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/edit_text_text_size"
+            app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+        <com.customviews.CustomEditText
+            android:id="@+id/et_lead_role"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_headers"
+            android:layout_weight="1"
+            android:drawableRight="@mipmap/drop_icon_gold"
+            android:editable="false"
+            android:focusable="false"
+            android:hint="@string/lo"
+            android:inputType="text"
+            android:padding="16dp"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/edit_text_text_size"
+            app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+
+        <com.customviews.CustomEditText
+            android:id="@+id/et_group"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_headers"
+            android:layout_weight="1"
+            android:drawableRight="@mipmap/drop_icon_gold"
+            android:editable="false"
+            android:focusable="false"
+            android:hint="@string/group1"
+            android:inputType="text"
+            android:padding="16dp"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/edit_text_text_size"
+            app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
     </LinearLayout>
 
 
@@ -58,11 +127,10 @@
         android:id="@+id/ll_local_leads"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/ll_headers"
+        android:layout_below="@+id/ll_filter"
         android:orientation="vertical">
 
-        <android.support.v4.widget.SwipeRefreshLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
+        <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/srl_local_leads"
             android:layout_width="match_parent"
@@ -72,8 +140,7 @@
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/rv_local_leads"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-            />
+                android:layout_height="match_parent" />
         </android.support.v4.widget.SwipeRefreshLayout>
 
     </LinearLayout>
@@ -82,21 +149,21 @@
         android:id="@+id/ll_server_leads"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/ll_headers"
+        android:layout_below="@+id/ll_filter"
         android:orientation="vertical">
-        <android.support.v4.widget.SwipeRefreshLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
+
+        <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/srl_server_leads"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/ll_headers"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/rv_server_leads"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-            />
+                android:layout_height="match_parent" />
 
         </android.support.v4.widget.SwipeRefreshLayout>
 
@@ -113,7 +180,7 @@
         android:textColor="@color/colorDarkGray"
         android:textSize="@dimen/textLargeExtra"
         android:visibility="gone"
-        app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM"/>
+        app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM" />
 
 
 </RelativeLayout>

@@ -83,6 +83,33 @@
                 <com.customviews.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="@string/husbands_name"
+                    app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/textSmall" />
+
+                <com.customviews.CustomTextView
+                    android:id="@+id/tv_husbanc_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp10"
+                    app:custom_font="@string/GOTHAM_ROUNDED_BOOK"
+                    android:ellipsize="end"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/textSmall" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dp5"
+                android:padding="@dimen/dp2">
+
+                <com.customviews.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="@string/loan_amount_column"
                     app:custom_font="@string/GOTHAM_ROUNDED_MEDIUM"
                     android:textColor="@color/colorPrimary"

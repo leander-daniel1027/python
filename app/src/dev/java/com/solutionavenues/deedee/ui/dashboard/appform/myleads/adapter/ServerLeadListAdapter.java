@@ -55,9 +55,10 @@ public class ServerLeadListAdapter extends RecyclerView.Adapter<ServerLeadListAd
         holder.tv_father_name.setText(dataBean.getLoanPersonelInfo().getFather_name());
         holder.tv_loan_amount.setText(dataBean.getLoanPersonelInfo().getLoan_amount());
         holder.tv_dob.setText(dataBean.getLoanPersonelInfo().getDob());
-        holder.tv_current_address.setText(dataBean.getAddressInfo().getCurrent_address());
+        holder.tv_current_address.setText(dataBean.getAddressInfo().getAddress());
         holder.tv_mobile1.setText(dataBean.getAddressInfo().getMobile_contact());
         holder.tv_mobile2.setText(dataBean.getAddressInfo().getPermanent_phone());
+        holder.tv_area.setText(dataBean.getAddressInfo().getArea());
         holder.ll_parent_server.setOnClickListener(onClickListener);
         holder.ll_parent_server.setTag(position);
         holder.tv_telecalling.setOnClickListener(onClickListener);
@@ -91,8 +92,20 @@ public class ServerLeadListAdapter extends RecyclerView.Adapter<ServerLeadListAd
             holder.tv_telecalling.setVisibility(View.GONE);
         }
 
+        if (!dataBean.getFi_status().equals("2")) {
+            holder.tv_fi.setVisibility(View.VISIBLE);
+        } else {
+            holder.tv_fi.setVisibility(View.GONE);
+        }
         if (rollID == 18) {
             holder.tv_fi.setVisibility(View.GONE);
+        }
+        if (rollID == 31) {
+            holder.ll_dob.setVisibility(View.GONE);
+            holder.ll_lat.setVisibility(View.GONE);
+            holder.ll_lng.setVisibility(View.GONE);
+            holder.ll_fathers_name.setVisibility(View.GONE);
+            holder.ll_loan_amount.setVisibility(View.GONE);
         }
         holder.navi_icon.setVisibility(View.VISIBLE);
         holder.navi_icon.setOnClickListener(new View.OnClickListener() {
@@ -137,13 +150,21 @@ public class ServerLeadListAdapter extends RecyclerView.Adapter<ServerLeadListAd
     public class Viewholder extends RecyclerView.ViewHolder {
         TextView tv_name, tv_father_name,
                 tv_loan_amount, tv_current_address,
-                tv_dob, tv_mobile1, tv_status, tv_telecalling, tv_mobile2, tv_fi, tv_latitude, tv_longitude;
-        LinearLayout ll_parent_server;
+                tv_dob, tv_mobile1, tv_area, tv_telecalling, tv_mobile2, tv_fi, tv_latitude, tv_longitude;
+        LinearLayout ll_parent_server, ll_mobile2, ll_mobile1, ll_dob, ll_lng, ll_lat, ll_currnt_address, ll_fathers_name, ll_loan_amount;
         ImageView navi_icon;
 
         public Viewholder(View itemView) {
             super(itemView);
             ll_parent_server = itemView.findViewById(R.id.ll_parent_server);
+            ll_mobile2 = itemView.findViewById(R.id.ll_mobile2);
+            ll_mobile1 = itemView.findViewById(R.id.ll_mobile1);
+            ll_dob = itemView.findViewById(R.id.ll_dob);
+            ll_lng = itemView.findViewById(R.id.ll_lng);
+            ll_lat = itemView.findViewById(R.id.ll_lat);
+            ll_currnt_address = itemView.findViewById(R.id.ll_currnt_address);
+            ll_loan_amount = itemView.findViewById(R.id.ll_loan_amount);
+            ll_fathers_name = itemView.findViewById(R.id.ll_fathers_name);
             tv_latitude = itemView.findViewById(R.id.tv_latitude);
             tv_longitude = itemView.findViewById(R.id.tv_longitude);
 
@@ -157,7 +178,7 @@ public class ServerLeadListAdapter extends RecyclerView.Adapter<ServerLeadListAd
             tv_telecalling = itemView.findViewById(R.id.tv_telecalling);
             tv_fi = itemView.findViewById(R.id.tv_fi);
             navi_icon = itemView.findViewById(R.id.navi_icon);
-            // tv_status = itemView.findViewById(R.id.tv_status);
+            tv_area = itemView.findViewById(R.id.tv_area);
 
         }
     }

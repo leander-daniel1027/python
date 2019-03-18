@@ -1,5 +1,6 @@
 package com.solutionavenues.deedee.ui.dashboard.grt;
 
+import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.os.Handler;
 import android.support.design.widget.TextInputLayout;
@@ -33,6 +34,7 @@ import com.solutionavenues.deedee.rest.BaseArguments;
 import com.solutionavenues.deedee.rest.RetrofitUtils;
 import com.solutionavenues.deedee.ui.dashboard.grt.adapter.MembersChildAdapter;
 import com.solutionavenues.deedee.ui.dashboard.grt.adapter.QuestionListAdapter;
+import com.solutionavenues.deedee.util.Utils;
 import com.utilities.ItemClickSupport;
 
 import java.util.ArrayList;
@@ -69,12 +71,12 @@ public class AddGRTFragment extends AppBaseFragment implements
     /*Result Views*/
     private ImageView iv_b_m_signature, iv_c_l_signature;
     private RadioGroup rg_group_passed;
-    private EditText et_cite_reason, et_bm_remarks, et_bm_name, et_center_leader;
+    private EditText et_cite_reason, et_bm_remarks, et_bm_name, et_center_leader, et_status;
     private TextInputLayout til_cite_reason;
     int user_id;
     private QuestionListAdapter questionAdapter;
     private RecyclerView rv_test_questions;
-    private ArrayList<AddGrtRequestModel.QuestionsBean> questionList;
+    private ArrayList<AddGrtRequestModel.QuestionsBean> questionList = new ArrayList<>();
     ArrayList<MemberListResponseModel.DataBean> membersList = new ArrayList<>();
 
 
@@ -130,8 +132,10 @@ public class AddGRTFragment extends AppBaseFragment implements
     private void initRecommendedViews() {
         tv_save = getView().findViewById(R.id.tv_save);
         tv_save.setOnClickListener(this);
+        et_status = getView().findViewById(R.id.et_status);
+        et_status.setOnClickListener(onStatusClickListener);
         ll_members_containor = getView().findViewById(R.id.ll_members_containor);
-        addRecommendedMemberView();
+//        addRecommendedMemberView();
     }
 
     private void initResultViews() {
@@ -164,10 +168,10 @@ public class AddGRTFragment extends AppBaseFragment implements
     private ArrayList<AddGrtRequestModel.QuestionsBean> getQuestions(ArrayList<MemberListResponseModel.DataBean> membersList) {
         questionList = new ArrayList<>();
         String questionArr[] = getActivity().getResources().getStringArray(R.array.grt_test_question_arr);
-        for (int i = 0; i < questionArr.length; i++) {
+        for (String aQuestionArr : questionArr) {
             AddGrtRequestModel.QuestionsBean questionsBean = new AddGrtRequestModel.QuestionsBean();
-            questionsBean.setQuestion(questionArr[i]);
-            questionsBean.setQuestion_id(questionArr[i].split(" ")[0]);
+            questionsBean.setQuestion(aQuestionArr);
+            questionsBean.setQuestion_id(aQuestionArr.split(" ")[0]);
             questionsBean.setSelected_members(new ArrayList<String>());
             ArrayList<AddGrtRequestModel.QuestionsBean.AllMembers> mList = new ArrayList<>();
             for (int j = 0; j < membersList.size(); j++) {
@@ -190,12 +194,10 @@ public class AddGRTFragment extends AppBaseFragment implements
 
     private void setQuestionAdapter(ArrayList<MemberListResponseModel.DataBean> membersList) {
         ArrayList<AddGrtRequestModel.QuestionsBean.AllMembers> allMembersList = new ArrayList<>();
-        /*for (int i = 0; i < membersList.size(); i++) {
-            AddGrtRequestModel.QuestionsBean.AllMembers allMembers = new AddGrtRequestModel.QuestionsBean.AllMembers();
-            allMembers.setId(membersList.get(i).getId());
-            allMembers.setName(membersList.get(i).getName());
-            allMembersList.add(allMembers);
-        }*/
+        for (int i = 0; i < membersList.size(); i++) {
+            addRecommendedMemberView(membersList.get(i));
+        }
+        onRefreshRecommended();
         ArrayList<AddGrtRequestModel.QuestionsBean> questionsBean = getQuestions(membersList);
         questionAdapter = new QuestionListAdapter(getActivity(), questionsBean, this);
         rv_test_questions.setAdapter(questionAdapter);
@@ -260,6 +262,7 @@ public class AddGRTFragment extends AppBaseFragment implements
         AddGrtRequestModel grtRequestModel = new AddGrtRequestModel();
         updateQuestionList();
         grtRequestModel.setUser_id(String.valueOf(user_id));
+        grtRequestModel.setStatus(et_status.getTag() != null ? String.valueOf(et_status.getTag()) : "1");
         grtRequestModel.setGroup_passed(getRadioButtonValue(rg_group_passed));
         grtRequestModel.setCite_reason(et_cite_reason.getText().toString());
         grtRequestModel.setBm_name(et_bm_name.getText().toString());
@@ -288,6 +291,23 @@ public class AddGRTFragment extends AppBaseFragment implements
             openPicker(v);
         }
     };
+
+    View.OnClickListener onStatusClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(final View v) {
+            Utils.hideKeyboard(getActivity());
+            Utils.showAlertDialog(getActivity(),
+                    "",
+                    getResources().getStringArray(R.array.status_arr),
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int item) {
+                            et_status.setText(getResources().getStringArray(R.array.status_arr)[item]);
+                            et_status.setTag(item);
+                        }
+                    });
+        }
+    };
+
 
     private void manageSaveAndSubmitButton(boolean navigateNext,
                                            TextView visibleTv, LinearLayout visibleLl) {
@@ -320,10 +340,13 @@ public class AddGRTFragment extends AppBaseFragment implements
         }
         View view = rv_test_questions.findViewHolderForAdapterPosition(pos).itemView;
         RecyclerView rv_group_members = view.findViewById(R.id.rv_group_members);
+        CheckBox cb_select_all = view.findViewById(R.id.cb_select_all);
         if (rv_group_members.getVisibility() == View.VISIBLE) {
             rv_group_members.setVisibility(View.GONE);
+            cb_select_all.setVisibility(View.GONE);
         } else {
             rv_group_members.setVisibility(View.VISIBLE);
+            cb_select_all.setVisibility(View.VISIBLE);
         }
     }
 
@@ -412,6 +435,31 @@ public class AddGRTFragment extends AppBaseFragment implements
         iv_c_l_signature.setOnClickListener(imageClickListener);
     }
 
+    private void addRecommendedMemberView(MemberListResponseModel.DataBean member) {
+        LayoutInflater inflater = LayoutInflater.from(getActivity());
+        View view = inflater.inflate(R.layout.layout_grt_members_view, null);
+        CheckBox cb = view.findViewById(R.id.ischeck_cb);
+        TextView memberName = view.findViewById(R.id.et_member_name);
+        TextView fName = view.findViewById(R.id.et_father_name);
+        TextView MName = view.findViewById(R.id.et_mother_name);
+        TextView HFName = view.findViewById(R.id.et_husbands_father_name);
+        ImageView iv_add_view = view.findViewById(R.id.iv_add_view);
+        ImageView iv_remove_view = view.findViewById(R.id.iv_remove_view);
+        ImageView iv_c_l_signature = view.findViewById(R.id.iv_c_l_signature);
+        iv_remove_view.setTag(ll_members_containor.getChildCount());
+        iv_c_l_signature.setTag(ll_members_containor.getChildCount());
+        ll_members_containor.addView(view);
+        iv_remove_view.setOnClickListener(onRecommendedDeleteListener);
+        iv_add_view.setOnClickListener(onRecommendedAddListener);
+        iv_c_l_signature.setOnClickListener(imageClickListener);
+
+        memberName.setText(member.getName());
+        fName.setText(member.getfName());
+        MName.setText(member.getmName());
+        HFName.setText(member.gethFName());
+//        cb.setChecked(member.getIsCheck().equals("true"));
+    }
+
     View.OnClickListener onRecommendedAddListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -456,6 +504,9 @@ public class AddGRTFragment extends AppBaseFragment implements
                 EditText et_member_name = view.findViewById(R.id.et_member_name);
                 EditText et_father_name = view.findViewById(R.id.et_father_name);
                 EditText et_mother_name = view.findViewById(R.id.et_mother_name);
+
+                CheckBox ischeck_cb = view.findViewById(R.id.ischeck_cb);
+
                 EditText et_husbands_father_name = view.findViewById(R.id.et_husbands_father_name);
                 ImageView iv_c_l_signature = view.findViewById(R.id.iv_c_l_signature);
 
@@ -463,11 +514,14 @@ public class AddGRTFragment extends AppBaseFragment implements
                 String father = et_father_name.getText().toString();
                 String mother = et_mother_name.getText().toString();
                 String hus_father = et_husbands_father_name.getText().toString();
+                String isCheck = ischeck_cb.isChecked() ? "Yes" : "NO";
+
 
                 membersBean.setMember_name(memberName);
                 membersBean.setFather_name(father);
                 membersBean.setMother_name(mother);
                 membersBean.setHusband_father_name(hus_father);
+                membersBean.setIsCheck(isCheck);
                 membersBean.setMember_signature(String.valueOf(iv_c_l_signature.getTag()));
                 if (!TextUtils.isEmpty(String.valueOf(iv_c_l_signature.getTag()))) {
                     if (String.valueOf(iv_c_l_signature.getTag()).contains("/")) {
@@ -484,7 +538,7 @@ public class AddGRTFragment extends AppBaseFragment implements
     private void addGRT(AddGrtRequestModel grtRequestModel) {
         if (ConnectionDetector.isNetAvail(getActivity())) {
             displayProgressBar(false, getActivity());
-              getRestClient().callback(this).addGRT(grtRequestModel);
+            getRestClient().callback(this).addGRT(grtRequestModel);
         } else {
             displayErrorDialog(getString(R.string.error_internet_connection));
         }
@@ -509,6 +563,7 @@ public class AddGRTFragment extends AppBaseFragment implements
         }
         if (ConnectionDetector.isNetAvail(getActivity())) {
             displayProgressBar(false, getActivity());
+            Log.e(TAG + "getId", String.valueOf(groupData.getId()));
             getRestClient().callback(this).getGroupMembers(String.valueOf(groupData.getId()));
         } else {
             displayErrorDialog(getString(R.string.error_internet_connection));
@@ -526,14 +581,16 @@ public class AddGRTFragment extends AppBaseFragment implements
                         uploadImage(allGrtImages.get(0), false);
                     } else {
                         dismissProgressBar(getActivity());
+                        displayAlertDialog(getString(R.string.message), getString(R.string.grt_successfully_submitted), this);
                     }
                 } else {
                     displayErrorDialog(responseModel.getMessage());
+                    dismissProgressBar(getActivity());
                 }
             } else {
                 dismissProgressBar(getActivity());
             }
-        }else if (apiId == ApiIds.ID_UPLOAD_IMAGE) {
+        } else if (apiId == ApiIds.ID_UPLOAD_IMAGE) {
             UploadImageResponseModel responseModel = (UploadImageResponseModel) response;
             if (responseModel != null) {
                 if (!responseModel.isError()) {

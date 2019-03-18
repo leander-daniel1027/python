@@ -90,6 +90,32 @@
                         app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
                 </android.support.design.widget.TextInputLayout>
 
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:drawableStart="@drawable/star"
+                    android:textColorHint="@color/editTextHintColor">
+
+                    <com.customviews.CustomEditText
+                        android:id="@+id/et_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/star"
+                        android:drawableEnd="@mipmap/drop_icon_gold"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="@string/status1"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:paddingTop="@dimen/dp15"
+                        android:paddingBottom="@dimen/dp15"
+                        android:text="@string/Approved"
+                        android:textColor="@color/editTextTextColor"
+                        android:textSize="@dimen/edit_text_text_size"
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+                </android.support.design.widget.TextInputLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -109,8 +135,8 @@
                         android:id="@+id/rg_remark"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/dp5"
                         android:layout_marginTop="@dimen/dp10"
+                        android:layout_marginBottom="@dimen/dp5"
                         android:orientation="horizontal">
 
                         <RadioButton
@@ -174,8 +200,8 @@
                     android:id="@+id/rg_cheque"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/dp5"
                     android:layout_marginTop="@dimen/dp10"
+                    android:layout_marginBottom="@dimen/dp5"
                     android:orientation="horizontal">
 
                     <RadioButton
@@ -209,63 +235,63 @@
                 </RadioGroup>
             </LinearLayout>
 
-        <com.customviews.CustomTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp10"
-            android:text="@string/utility_bill"
-            android:textColor="@color/colorAccent"
-            android:textSize="@dimen/textLarge"
-            app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp10"
-            android:background="@drawable/bg_transparent_layout"
-            android:orientation="horizontal"
-            android:weightSum="2"
-            android:padding="@dimen/dp10">
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="0dp"
+            <com.customviews.CustomTextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textColorHint="@color/editTextHintColor">
+                android:layout_marginTop="@dimen/dp10"
+                android:text="@string/utility_bill"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/textLarge"
+                app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
 
-                <com.customviews.CustomEditText
-                    android:id="@+id/et_bill_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/bill_name"
-                    android:imeOptions="actionNext"
-                    android:inputType="text"
-                    android:padding="@dimen/dp15"
-                    android:textColor="@color/editTextTextColor"
-                    android:textSize="@dimen/edit_text_text_size"
-                    app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
-            </android.support.design.widget.TextInputLayout>
-
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="0dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textColorHint="@color/editTextHintColor">
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@drawable/bg_transparent_layout"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp10"
+                android:weightSum="2">
 
-                <com.customviews.CustomEditText
-                    android:id="@+id/et_relationship"
-                    android:layout_width="match_parent"
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:hint="@string/relationship"
-                    android:imeOptions="actionNext"
-                    android:inputType="text"
-                    android:padding="@dimen/dp15"
-                    android:textColor="@color/editTextTextColor"
-                    android:textSize="@dimen/edit_text_text_size"
-                    app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
-            </android.support.design.widget.TextInputLayout>
-        </LinearLayout>
+                    android:layout_weight="1"
+                    android:textColorHint="@color/editTextHintColor">
+
+                    <com.customviews.CustomEditText
+                        android:id="@+id/et_bill_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/bill_name"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:padding="@dimen/dp15"
+                        android:textColor="@color/editTextTextColor"
+                        android:textSize="@dimen/edit_text_text_size"
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/editTextHintColor">
+
+                    <com.customviews.CustomEditText
+                        android:id="@+id/et_relationship"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/relationship"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:padding="@dimen/dp15"
+                        android:textColor="@color/editTextTextColor"
+                        android:textSize="@dimen/edit_text_text_size"
+                        app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -350,8 +376,8 @@
                         android:id="@+id/rg_remark2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/dp5"
                         android:layout_marginTop="@dimen/dp10"
+                        android:layout_marginBottom="@dimen/dp5"
                         android:orientation="horizontal">
 
                         <RadioButton
@@ -527,8 +553,8 @@
                 <com.customviews.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/dp10"
                     android:layout_marginLeft="@dimen/dp5"
+                    android:layout_marginBottom="@dimen/dp10"
                     android:lineSpacingExtra="@dimen/dp5"
                     android:text="@string/fi_declaration_text"
                     android:textColor="@color/colorWhite"
@@ -560,8 +586,8 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/dp10"
                     android:layout_marginTop="@dimen/dp10"
+                    android:layout_marginRight="@dimen/dp10"
                     android:layout_weight="1"
                     android:background="@color/transparent_white"
                     android:orientation="vertical"

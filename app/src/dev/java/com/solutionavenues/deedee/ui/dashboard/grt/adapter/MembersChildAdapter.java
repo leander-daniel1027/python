@@ -25,6 +25,13 @@ public class MembersChildAdapter extends BaseRecycleAdapter {
     private int parentPosition;
     TextView tv_question;
     String question;
+    private boolean selectAll;
+
+    public void setSelectAll(boolean selectAll) {
+        this.selectAll = selectAll;
+        notifyDataSetChanged();
+    }
+
     public MembersChildAdapter(Context context,
                                ArrayList<AddGrtRequestModel.QuestionsBean> questionList,
                                UpdateMembersList listener, int parentPosition, TextView tv_question, String question) {
@@ -64,11 +71,11 @@ public class MembersChildAdapter extends BaseRecycleAdapter {
             ll_member_parent.setTag(position);
             ll_member_parent.setOnClickListener(this);
 
-            if(parentPosition == 2){
-                if(cb_member.isChecked()){
-                    tv_question.setText(question+"(Married)");
-                }else {
-                    tv_question.setText(question+"(Widowed)");
+            if (parentPosition == 2) {
+                if (cb_member.isChecked()) {
+                    tv_question.setText(question + "(Married)");
+                } else {
+                    tv_question.setText(question + "(Widowed)");
                 }
             }
            /* if (membersList.get(position).isSelected()) {
@@ -76,19 +83,20 @@ public class MembersChildAdapter extends BaseRecycleAdapter {
             } else {
                 cb_member.setChecked(false);
             }*/
+            cb_member.setChecked(selectAll);
             cb_member.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
                         if (parentPosition == 2)
-                            tv_question.setText(question+"(Married)");
+                            tv_question.setText(question + "(Married)");
                         questionList.get(parentPosition).getAll_members().get(position).setSelected(true);
                     } else {
                         if (parentPosition == 2)
-                            tv_question.setText(question+"(Widowed)");
+                            tv_question.setText(question + "(Widowed)");
                         questionList.get(parentPosition).getAll_members().get(position).setSelected(false);
                     }
-                    listener.updateMembers(parentPosition,questionList.get(parentPosition).getAll_members());
+                    listener.updateMembers(parentPosition, questionList.get(parentPosition).getAll_members());
                 }
             });
 
@@ -102,7 +110,7 @@ public class MembersChildAdapter extends BaseRecycleAdapter {
 
 
     public interface UpdateMembersList {
-        void updateMembers(int parentPosition,ArrayList<AddGrtRequestModel.QuestionsBean.AllMembers> list);
+        void updateMembers(int parentPosition, ArrayList<AddGrtRequestModel.QuestionsBean.AllMembers> list);
     }
 
 }

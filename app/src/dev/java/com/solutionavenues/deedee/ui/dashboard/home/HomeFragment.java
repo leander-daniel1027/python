@@ -1,11 +1,14 @@
 package com.solutionavenues.deedee.ui.dashboard.home;
 
 import android.content.Intent;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.RelativeLayout;
 
 import com.solutionavenues.deedee.R;
 import com.solutionavenues.deedee.appBase.AppBaseFragment;
+import com.solutionavenues.deedee.model.DashboardItem;
 import com.solutionavenues.deedee.ui.dashboard.appform.ApplicationFormFragment;
 import com.solutionavenues.deedee.ui.dashboard.appform.myleads.LeadListFragment;
 import com.solutionavenues.deedee.ui.dashboard.centerform.AddCenterFragment;
@@ -17,15 +20,22 @@ import com.solutionavenues.deedee.ui.dashboard.locality.LocalityFragment;
 import com.solutionavenues.deedee.ui.dashboard.recovery.activity.RecoveryGroupsActivity;
 import com.solutionavenues.deedee.ui.dashboard.setting.SettingFragment;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Azher on 18/6/18.
  */
-public class HomeFragment extends AppBaseFragment {
+public class HomeFragment extends AppBaseFragment implements View.OnClickListener {
 
     private RelativeLayout rl_setting, rl_enquiry,
             rl_locality, rl_application_form,
             rl_my_leads, rl_group, rl_center_form, rl_fi,
-            rl_added_fi, rl_my_group,rl_recovery;
+            rl_added_fi, rl_my_group, rl_recovery;
+
+    private RecyclerView recyclerView;
+    private HomeListAdapter homeListAdapter;
+    private List<DashboardItem> dashboardItemList;
 
     @Override
     public int getLayoutResourceId() {
@@ -56,47 +66,71 @@ public class HomeFragment extends AppBaseFragment {
         rl_fi.setOnClickListener(this);
         rl_added_fi.setOnClickListener(this);
         rl_my_group.setOnClickListener(this);
+
+        recyclerView = getView().findViewById(R.id.home_rv);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2);
+        recyclerView.setLayoutManager(gridLayoutManager);
+        String homeList[] = getResources().getStringArray(R.array.homescreen_item_arr);
+        int roleType = getMyApplication().getUserPrefs().getLoggedInUser().getRole_id();
+        dashboardItemList = new ArrayList<>();
+        for (int i = 0; i < homeList.length; i++) {
+            DashboardItem newDashBoard = new DashboardItem(i, homeList[i]);
+            if (roleType == 18 && (i == 8 || i == 10)) {
+                continue;
+            }
+            if (roleType == 31 && i == 10) {
+                continue;
+            }
+            dashboardItemList.add(newDashBoard);
+        }
+        homeListAdapter = new HomeListAdapter(getActivity(), dashboardItemList, this);
+        recyclerView.setAdapter(homeListAdapter);
     }
+
+
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.rl_setting:
-                addSettingFragment();
-                break;
-            case R.id.rl_enquiry:
-                addEnquiryFragment();
-                break;
-            case R.id.rl_locality:
-                addLocalityFragment();
-                break;
-            case R.id.rl_application_form:
-                addAppFormFragment();
-                break;
-            case R.id.rl_my_leads:
-                addLeadListFragment();
-                break;
-            case R.id.rl_group:
-                addGroupFormFragment();
-                break;
-            case R.id.rl_center_form:
-                addCenterFormFragment();
-                break;
-            case R.id.rl_fi:
-                //addFiFormFragment();
-                break;
-            case R.id.rl_added_fi:
-                addFiListFragment();
-                break;
-            case R.id.rl_my_group:
-                addMyGroupFragment();
-                break;
-            case R.id.rl_recovery:
-                 startActivity(new Intent(getActivity(), RecoveryGroupsActivity.class));
-                break;
-
-
+        if (v.getId() == R.id.hs_item_parent) {
+            int pos_cgt = (int) v.getTag();
+            DashboardItem dashboardItem = dashboardItemList.get(pos_cgt);
+            switch (dashboardItem.getId()) {
+                case 9:
+                    addSettingFragment();
+                    break;
+                case 0:
+                    addEnquiryFragment();
+                    break;
+                case 1:
+                    addLocalityFragment();
+                    break;
+                case 6:
+                    addAppFormFragment();
+                    break;
+                case 7:
+                    addLeadListFragment();
+                    break;
+                case 2:
+                    addGroupFormFragment();
+                    break;
+                case 4:
+                    addCenterFormFragment();
+                    break;
+                case 5:
+                    //addFiFormFragment();
+                    break;
+                case 8:
+                    addFiListFragment();
+                    break;
+                case 3:
+                    addMyGroupFragment();
+                    break;
+                case 10:
+                    startActivity(new Intent(getActivity(), RecoveryGroupsActivity.class));
+                    break;
+            }
         }
+
 
     }
 
@@ -200,8 +234,6 @@ public class HomeFragment extends AppBaseFragment {
             e.printStackTrace();
         }
     }
-
-
 
 
     private void addFiListFragment() {

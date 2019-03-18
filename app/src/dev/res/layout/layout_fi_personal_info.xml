@@ -1354,6 +1354,17 @@
                     app:custom_font="@string/GOTHAM_ROUNDED_BOOK" />
             </android.support.design.widget.TextInputLayout>
 
+
+
+            <CheckBox
+                android:id="@+id/cb_leader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp15"
+                android:visibility="gone"
+                android:hint="@string/Leader"
+                android:layoutDirection="rtl" />
+
         </LinearLayout>
     </ScrollView>
 
